@@ -20,7 +20,7 @@ In these chapters, you’ll find everything you need to win your next CTF compet
 * Guidance to help you design and create your own toolkits
 * Case studies of attacker behavior, both in the real world and in past CTF competitions
 
-To make your lives easier, we’ve supplemented each lesson with the Internet’s best supporting reference materials. These come from some of the best minds in the computer security field.
+To make your lives easier, we’ve supplemented each lesson with the Internet’s best supporting reference materials. These come from some of the best minds in the computer security field. Looking ahead, we hope you’ll collaborate to keep this book evolving with the industry.
 
 We’ve tried to structure this so you can learn as quickly as you want, but if you have questions along the way, [contact us](https://github.com/trailofbits/ctf/issues). We’ll direct your question to the most relevant expert. If there’s enough demand, we may even schedule an online lecture.
 
