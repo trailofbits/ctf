@@ -1,7 +1,7 @@
 # Contributors
 This book was built on a lot of hard work, most of which happened elsewhere. Without permission to republish from these folks, this book would still be in development. They have our gratitude and admiration.
 
-So, reader, when you’ve completed a few CTFs, and you’re ready for more, reach out to this list. They like to support ambition, and they just might have an internship open.
+So, reader, when you’ve completed a few CTFs, and you’re ready for more, reach out to this list. They like to support ambition, and they just might know someone who needs some talent.
 
 * [Andrew Ruef](http://www.mimisbrunnr.net/~munin/blog/) created the initial proposal and slides
 * [Evan Jensen](https://github.com/wontonSlim) developed many of the lessons
