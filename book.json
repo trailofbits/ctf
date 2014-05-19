@@ -1,0 +1,7 @@
+{
+	"plugins": ["ga", "-mixpanel", "-mathjax"],
+	"pluginsConfig": {
+		"ga": { "token": "UA-XXXXXXXX-X" },
+		"fontSettings": { "theme": "night" }
+	}
+}
