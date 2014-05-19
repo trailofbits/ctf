@@ -22,7 +22,7 @@ If you ever wanted to start running, you were probably encouraged to sign up to 
 Visit [CTF Time](https://ctftime.org/event/list/upcoming) and the [CapCTF calendar](http://captf.com/calendar/) for a more complete list of CTFs occuring every week of the year.
 
 ## How is a Wargame different?
-Wargames are similar to a CTF but are always ongoing. Typically, they are organized into levels that get progressively harder as you solve more of them. Wargames are an excellent way to practice for CTF! Here are some of our favorites
+Wargames are similar to a CTF but are always ongoing. Typically, they are organized into levels that get progressively harder as you solve more of them. Wargames are an excellent way to practice for CTF! Here are some of our favorites:
 
 * [Micro Corruption](https://microcorruption.com/login)
 * [SmashTheStack](http://www.smashthestack.org/)
