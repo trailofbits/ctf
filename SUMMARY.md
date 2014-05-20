@@ -14,5 +14,5 @@
     * [Toolkit Prep](toolkits/prep.md)
 * [Operational Tradecraft](tradecraft/README.md)
     * [Case Studies](tradecraft/case_studies.md)
-* [Contributors](contrib/README.md)
+* [Contributors](contrib.md)
 
