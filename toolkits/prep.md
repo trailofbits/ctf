@@ -1,4 +1,4 @@
-# Toolkit Creation
+# Toolkit Prep
 
 Welcome to the module on toolkit creation. A toolkit is a set of utilities that enable you and your  team to achieve operational goals in the most efficient manner possible. Your toolkit is a force multiplier that will enable you to minimize the time you spend developing exploits during the game and maximize the return on your development time.
 
