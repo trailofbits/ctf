@@ -13,7 +13,7 @@ A modern computer security professional should be an expert in at least one of t
 If you ever wanted to start running, you were probably encouraged to sign up to a 5k to keep focused on a goal. The same principle applies here: pick a CTF in the near future that you want to compete in and come up with a practice schedule. Here are some CTFs that we can recommend:
 
 * [PicoCTF](https://picoctf.com/) and [PlaidCTF](http://www.plaidctf.com/) by CMU
-* [HS CTF](http://hsctf.com/) is made for high school students
+* [HSCTF](http://hsctf.com/) is made for high school students
 * [Ghost in the Shellcode (GitS)](http://ghostintheshellcode.com/)
 * [CSAW CTF](https://ctf.isis.poly.edu/) by NYU-Poly
 * [UCSB iCTF](http://ictf.cs.ucsb.edu/) is for academics only
