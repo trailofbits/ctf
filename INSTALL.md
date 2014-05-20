@@ -1,4 +1,4 @@
-# Contributing
+# Gitbook Development
 If you want to make a contribution, simply commit your new markdown to the `master` branch and we'll take it from there. The instructions below are only for setting up your own, full development environment and are uneccessary for most people.
 
 ## Dependencies
