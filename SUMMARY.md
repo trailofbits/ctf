@@ -15,4 +15,4 @@
 * [Operational Tradecraft](tradecraft/README.md)
     * [Case Studies](tradecraft/case_studies.md)
 * [Contributors](contrib.md)
-
+* [Appendix](appendix.md)
