@@ -23,7 +23,7 @@ Wireshark, however, is an industry standard network protocol analyzer that has b
 
 ## Tools
 
-When auditing, it is help to use a tool design to profile and navigate the codebase. Below are two tools, Source Navigator and Understand, designed to help analysts get familiar with code quickly by collecting and displaying information about data relationships, API usage, design patterns and control flow. An example of a useful diffing tool is also listed below. One example of a free, open source code auditing tool is the Clang Static Analyzer, which can help you track down programming errors in common APIs and vulnerable programming patterns.
+When auditing, it is helpful to use a tool design to profile and navigate the codebase. Below are two tools, Source Navigator and Understand, designed to help analysts get familiar with code quickly by collecting and displaying information about data relationships, API usage, design patterns and control flow. An example of a useful diffing tool is also listed below. One example of a free, open source code auditing tool is the Clang Static Analyzer, which can help you track down programming errors in common APIs and vulnerable programming patterns.
 
 * [Source Navigator](http://sourcenav.sourceforge.net/)
 * [Scitools Understand](http://www.scitools.com/)
