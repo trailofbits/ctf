@@ -28,7 +28,7 @@ First, clone the master branch into a folder like normal.
 dan:dan $ cd ~/github
 dan:github $ mkdir ctf
 dan:github $ cd ctf
-dan:github $ git clone https://github.com/trailofbits/ctf .
+dan:github $ git clone git@github.com:trailofbits/ctf.git .
 ```
 
 Next, clone the gh-pages branch into another folder inside the same parent. In this directory, switch to the gh-pages branch and delete the master branch.
@@ -37,7 +37,7 @@ Next, clone the gh-pages branch into another folder inside the same parent. In t
 dan:dan $ cd ~/github
 dan:github $ mkdir ctf-pages
 dan:github $ cd ctf-pages
-dan:ctf-pages $ git clone https://github.com/trailofbits/ctf .
+dan:ctf-pages $ git clone git@github.com:trailofbits/ctf.git .
 dan:ctf-pages $ git checkout origin/gh-pages -b gh-pages
 dan:ctf-pages $ git branch -d master
 dan:ctf-pages $ git branch
