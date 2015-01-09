@@ -49,6 +49,7 @@ The roles above each require a different, highly specialized body of knowledge. 
 Fortunately, there are dozens of good books written about each topic inside information security. [Dino Dai Zovi](http://www.amazon.com/A-Bug-Hunters-Reading-List/lm/R21POHD6Y2DOLQ) and [Tom Ptacek](http://www.amazon.com/lm/R2EN4JTQOCHNBA/ref=cm_lm_pthnk_view) both have excellent reading lists. We recommend looking at:
 
 * [Gray Hat Hacking](http://www.amazon.com/Hacking-Ethical-Hackers-Handbook-Edition/dp/0071832386/)
+* [Black Hat Python](http://www.amazon.com/Black-Hat-Python-Programming-Pentesters/dp/1593275900)
 * [The Myths of Security](http://www.amazon.com/Myths-Security-Computer-Industry-Doesnt/dp/0596523025?)
 * [Hacking: The Next Generation](http://www.amazon.com/Hacking-Next-Generation-Animal-Guide/dp/0596154577)
 * and any book from O'Reilly on a scripting language of your choice
