@@ -8,13 +8,12 @@ These are my views on information security careers based on the experience I've 
 3. Learn from a Book
 4. Learn from a Course
 5. University
-6. University
-7. Communication
-8. Meet People
+6. Communication
+7. Meet People
 8. Conferences
-10. Certifications
-11. Links
-12. Friends of the Guide
+8. Certifications
+10. Links
+11. Friends of the Guide
 
 ## Employers
 As far as I can tell, there are five major employers in the infosec industry (not counting academia).
