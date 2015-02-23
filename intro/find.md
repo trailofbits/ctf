@@ -19,6 +19,7 @@ Wargames are similar to a CTF but are always ongoing. Typically, they are organi
 * [SmashTheStack](http://www.smashthestack.org/)
 * [OverTheWire](http://overthewire.org/wargames/)
 * [Exploit Exercises](http://exploit-exercises.com/)
+* [CTF365](https://ctf365.com/)
 
 ## What about CCDC?
 There are some defense-only competitions that disguise themselves as CTF competitions, mainly the Collegiate Cyber Defense Challenge (CCDC) and its regional variations, and our opinion is that you should avoid them. They are unrealistic exercises in frustration and will teach you little about security or anything else. They are incredibly fun to play as a Red Team though!
