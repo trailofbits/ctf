@@ -18,6 +18,7 @@ Some things to think about while evaluating tradecraft:
 
 ### Campaigns
 * [APT1](http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf)
+* [APT28](https://www.fireeye.com/content/dam/legacy/resources/pdfs/apt28.pdf)
 * [StuxNet](http://www.symantec.com/content/en/us/enterprise/media/security_response/whitepapers/w32_stuxnet_dossier.pdf)
 * [Careto](http://www.securelist.com/en/downloads/vlpdfs/unveilingthemask_v1.0.pdf)
 
