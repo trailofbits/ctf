@@ -9,6 +9,8 @@ If you ever wanted to start running, you were probably encouraged to sign up to 
 * [CSAW CTF](https://ctf.isis.poly.edu/) by NYU-Poly
 * [UCSB iCTF](http://ictf.cs.ucsb.edu/) is for academics only
 * [Defcon CTF](https://legitbs.net/)
+* [ROOTCON CTF] (http://blog.rootcon.org/2015/08/rc9-capture-flag.html)
+* [Infosec Institute CTF] (http://ctf.infosecinstitute.com/)
 
 Visit [CTF Time](https://ctftime.org/event/list/upcoming) and the [CapCTF calendar](http://captf.com/calendar/) for a more complete list of CTFs occuring every week of the year.
 
