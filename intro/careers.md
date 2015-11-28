@@ -113,7 +113,7 @@ In general, it is far more productive to spend time playing in a CTF, then using
 * [Reddit](http://www.reddit.com/r/netsec/comments/cc4ye/information_security_careers_cheatsheet) and [Hacker News](https://news.ycombinator.com/item?id=1409735) threads about this post
 * Security Advice
   * [How to Break Into Security, Ptacek Edition](http://krebsonsecurity.com/2012/06/how-to-break-into-security-ptacek-edition/)
-  * [VRT: How to Become an Infosec Expert, Part I](http://vrt-blog.snort.org/2013/01/how-to-become-infosec-expert-part-i.html)
+  * [VRT: How to Become an Infosec Expert, Part I](http://blog.talosintel.com/2013/01/how-to-become-infosec-expert-part-i.html)
   * [Five pieces of advice for those new to the infosec industry](http://www.cgisecurity.com/2012/09/five-pieces-of-advice-for-those-new-to-the-infosec-industry.html)
   * [How to Milk a Computer Science Education for Offensive Security Skills](http://blog.strategiccyber.com/2012/12/26/computer-science-undergrad-to-offensive-security/)
   * [Kill Your Idols](https://www.defcon.org/html/links/dc-speakerscorner.html#idols-moyer), Shawn Moyer's reflections on his first years at Defcon
