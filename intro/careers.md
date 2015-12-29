@@ -74,8 +74,6 @@ If you're looking for something more hands-on and directed, there are lots of un
 | [Cybersecurity Specialization](https://www.coursera.org/specializations/cybersecurity)          | various            | UMD         |
 | [Graduate Computer Security](http://cseweb.ucsd.edu/classes/wi09/cse227/syllabus.html)          | Hovav Shacham      | UCSD        |
 
-[Old Table](https://web.archive.org/web/20140228120245/http://pentest.cryptocity.net/careers) — *Feb. 28, 2014*
-
 ## University
 The easiest shortcut to finding a university with a dedicated security program is to look through the [NSA Centers of Academic Excellence](http://www.nsa.gov/ia/academic_outreach/nat_cae/institutions.shtml) (NSA-COE) institution list. This certification has become watered down as more universities have obtained it and it might help to focus your search on those that have obtained the newer [COE-CO](http://www.nsa.gov/academia/nat_cae_cyber_ops/nat_cae_co_requirements.shtml) certification. Remember, certifications are only a guideline. You should look into the actual programs at each university instead of basing your decision on a certification alone.
 
