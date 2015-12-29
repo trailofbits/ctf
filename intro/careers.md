@@ -62,6 +62,7 @@ If you're looking for something more hands-on and directed, there are lots of un
 | Course                                                                                          | Instructor(s)      | Institution |
 | :-----------------------------------------------------------------------------------------------|-------------------:| -----------:|
 | [Secure Software Principles](http://www.cs.rpi.edu/academics/courses/spring10/csci4971/)        | RPISEC             | RPI         |
+| [Modern Binary Exploitation](http://security.cs.rpi.edu/courses/binexp-spring2015/)             | RPISEC             | RPI         |
 | [Computer Security](http://inst.eecs.berkeley.edu/~cs161/archives.html)                         | various            | Berkeley    |
 | [Computer and Network Security](https://crypto.stanford.edu/cs155/)                             | Dan Boneh          | Stanford    |
 | [Web Programming and Security](https://crypto.stanford.edu/cs142/)                              | Dan Boneh          | Stanford    |
@@ -71,6 +72,7 @@ If you're looking for something more hands-on and directed, there are lots of un
 | [Malware Analysis and Antivirus Technologies](http://www.tml.tkk.fi/Opinnot/T-110.6220/2008/)   | various            | TML         |
 | [System Security and Binary Code Analysis](https://www.utdallas.edu/~zxl111930/spring2012.html) | Zhiqiang Lin	      | UT Dallas   |
 | [Cybersecurity Specialization](https://www.coursera.org/specializations/cybersecurity)          | various            | UMD         |
+| [Graduate Computer Security](http://cseweb.ucsd.edu/classes/wi09/cse227/syllabus.html)          | Hovav Shacham      | UCSD        |
 
 [Old Table](https://web.archive.org/web/20140228120245/http://pentest.cryptocity.net/careers) — *Feb. 28, 2014*
 
