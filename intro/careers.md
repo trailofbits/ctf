@@ -59,7 +59,20 @@ Don't forget that reading the book alone won't give you any additional skills be
 ## Learn from a Course
 If you're looking for something more hands-on and directed, there are lots of university courses about information security available online. I listed some of the best ones that have course materials available below (ordered by institution name). The RPI course is the most similar to this one and Hovav gets points for the best academic reading list, but every course on this list is fantastic.
 
-[Ed. note: Table to be added/updated later.]
+| Course                                                                                          | Instructor(s)      | Institution |
+| :-----------------------------------------------------------------------------------------------|-------------------:| -----------:|
+| [Secure Software Principles](http://www.cs.rpi.edu/academics/courses/spring10/csci4971/)        | RPISEC             | RPI         |
+| [Computer Security](http://inst.eecs.berkeley.edu/~cs161/archives.html)                         | various            | Berkeley    |
+| [Computer and Network Security](https://crypto.stanford.edu/cs155/)                             | Dan Boneh          | Stanford    |
+| [Web Programming and Security](https://crypto.stanford.edu/cs142/)                              | Dan Boneh          | Stanford    |
+| [Intro to Web Application Security](https://stuff.mit.edu/iap/websecurity/)                     | Edward Z. Yang     | MIT         |
+| [Intro to Software Exploitation](https://stuff.mit.edu/iap/exploit/)                            | Nathan Rittenhouse	| MIT         |
+| [UNIX Security Holes](http://cr.yp.to/2004-494.html)                                            | D. J. Bernstein    | UIC         |
+| [Malware Analysis and Antivirus Technologies](http://www.tml.tkk.fi/Opinnot/T-110.6220/2008/)   | various            | TML         |
+| [System Security and Binary Code Analysis](https://www.utdallas.edu/~zxl111930/spring2012.html) | Zhiqiang Lin	      | UT Dallas   |
+| [Cybersecurity Specialization](https://www.coursera.org/specializations/cybersecurity)          | various            | UMD         |
+
+[Old Table](https://web.archive.org/web/20140228120245/http://pentest.cryptocity.net/careers) — *Feb. 28, 2014*
 
 ## University
 The easiest shortcut to finding a university with a dedicated security program is to look through the [NSA Centers of Academic Excellence](http://www.nsa.gov/ia/academic_outreach/nat_cae/institutions.shtml) (NSA-COE) institution list. This certification has become watered down as more universities have obtained it and it might help to focus your search on those that have obtained the newer [COE-CO](http://www.nsa.gov/academia/nat_cae_cyber_ops/nat_cae_co_requirements.shtml) certification. Remember, certifications are only a guideline. You should look into the actual programs at each university instead of basing your decision on a certification alone.
