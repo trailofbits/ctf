@@ -38,4 +38,4 @@ Make sure you’re intimately familiar with the internals of the languages you t
 * [TAOSSA Chapter 6: C Language Issues](/ctf/vulnerabilities/references/Dowd_ch06.pdf) - Strongly recommended reading
 * [Integer Overflow](http://en.wikipedia.org/wiki/Integer_overflow)
 * [Wireshark Security](https://wireshark.org/security/) - Examples of lots of vulnerablities
-* [Gera's Insecure Programming by Example](http://community.coresecurity.com/~gera/InsecureProgramming/) - Examples of small vulnerable C programs
+* [Gera's Insecure Programming by Example](https://github.com/deadbits/InsecureProgramming) - Examples of small vulnerable C programs
