@@ -6,7 +6,7 @@ This module is about becoming familiar with the native layer and developing stra
 ## Lecture
 Learning x86 can appear daunting at first and requires some dedicated study to master. We recommend reading Chapter 3 of "Computer Systems: A Programmer's Perspective" to learn how C programs get compiled into machine code. Once you you have some basic, working knowledge of this process then keep a handy reference guide around like the x86 Assembly Guide from the University of Virginia. We've found this video series from Quinn Liu to be a quick and painless introduction too.
 
-* CS:APP Chapter 3: [Machine-Level Representation of Programs](https://picoctf.com/docs/asmhandout.pdf)
+* CS:APP Chapter 3: [Machine-Level Representation of Programs](http://gec.di.uminho.pt/DISCIP/MaisAC/CS-APP_Bryant/csapp.preview3.pdf)
 * [x86 Assembly Guide](http://www.cs.virginia.edu/~evans/cs216/guides/x86.html)
 * [Introduction to x86 Assembly](https://www.youtube.com/watch?v=qn1_dRjM6F0&list=PLPXsMt57rLthf58PFYE9gOAsuyvs7T5W9)
 
