@@ -2,9 +2,9 @@
 
 <script async class="speakerdeck-embed" data-id="424ae340bbfc013182c64af3413e5309" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
 
-Forensics is a broad CTF category that does not map well to any particular job role in the security industry, although some challenges model the kinds of tasks seen in incident response. Computer forensics might be a secondary concern in most incident response, outside of law enforcement. In a CTF, "Forensics" challenges can include file format analysis, steganography, memory dump analysis, or network packet capture analysis. Any challenge to examine and process a hidden piece of information out of static data files (as opposed to executable programs) could be considered a Forensics challenge.
+Forensics is a broad CTF category that does not map well to any particular job role in the security industry, although some challenges model the kinds of tasks seen in Incident Response (IR). Even in IR work, computer forensics is usually the domain of law enforcement seeking evidentiary data and attribution, rather than the commercial incident responder who may just be interested in expelling an attacker and/or restoring system integrity. 
 
-Rarely will a CTF challenge look like real-world computer forensics, which hardly ever involves cleverly encoded bytes, hidden data, mastroshka-like files-within-files, or other such tricks. You don't bust a criminal by carefully reassembling a corrupted PNG file, revealing a photo of a QR code that decodes to a password for a zip archive containing the confession. No. Real-world forensics typically requires that a practictioner find indirect evidence of maliciousness: either the traces of an attacker on a system, or the traces of "insider threat" behavior. Real-world computer forensics is largely about knowing where to find incriminating clues in logs, in memory, in filesystems/registries, and associated file and filesystem metadata. Also, network (packet capture) forensics is more about metadata analysis than content analysis, as most network sessions are TLS-encrypted between endpoints now.
+In a CTF however, "Forensics" challenges can include file format analysis, steganography, memory dump analysis, or network packet capture analysis. Any challenge to examine and process a hidden piece of information out of static data files (as opposed to executable programs) could be considered a Forensics challenge. Rarely will a CTF challenge look like real-world computer forensics, which would hardly ever involve a scheme of cleverly encoded bytes, hidden data, mastroshka-like files-within-files, or other such brain-teaser puzzles. One would typically not bust a criminal by carefully reassembling a corrupted PNG file, revealing a photo of a QR code that decodes to a password for a zip archive containing the confession. Rather, real-world forensics typically requires that a practictioner find indirect evidence of maliciousness: either the traces of an attacker on a system, or the traces of "insider threat" behavior. Real-world computer forensics is largely about knowing where to find incriminating clues in logs, in memory, in filesystems/registries, and associated file and filesystem metadata. Also, network (packet capture) forensics is more about metadata analysis than content analysis, as most network sessions are TLS-encrypted between endpoints now.
 
 This disconnect between the somewhat artificial puzzle-game CTF "Forensics" and the way that forensics is actually done in the field might be why this category does not receive as much attention as the vulnerability-exploitation style challenges. It may also lack the "blackhat" appeal that draws many to play CTFs. Regardless, many players enjoy the variety and novelty in forensics CTF challenges. It can also be more beginner friendly, and the playing field is evened out by the fact that there are no $5,000 professional tools like IDA Pro with Hex-Rays Decompiler that would give a huge advantage to some players but not others, as is the case with executable analysis challenges.
 
@@ -24,47 +24,47 @@ TODO: crash-course in manipulating binary data in Python
 TODO: list out some recommended tools and strategies for each challenge type
 
 ### File format identification (and "magic bytes")
-the file command (libmagic)
+* the file command (libmagic)
 
 ### File carving
-binwalk
-zlib streams
-foremost
+* binwalk
+* zlib streams
+* foremost
 
 ### Strings analysis
-strings
-grep
+* strings
+* grep, bgrep
 
 ### Binary-as-text encodings
-https://en.wikipedia.org/wiki/Binary-to-text_encoding
-ASCII-encoded hexadecimal, identifiable by its charset (0-9, A-F)
-Base64, identifiable by its charset and the "=" suffix
+* https://en.wikipedia.org/wiki/Binary-to-text_encoding
+* ASCII-encoded hexadecimal, identifiable by its charset (0-9, A-F)
+* Base64, identifiable by its charset and the "=" suffix
 
 ### Obfuscated Data
-XOR
+* XOR
 
 ### Image formats
-EXIF data
-Compression
-Steganography
-PNG (can be opened in Wireshark)
-Gimp
+* EXIF data
+* Compression
+* Steganography
+* PNG (can be opened in Wireshark)
+* Gimp
 
 ### Other file formats
-PDF (qpdf package, PeepDF)
-Kaitai.io
-File-format-aware / templated hex-editors
-"zip -FF" command
+* PDF (qpdf package, PeepDF)
+* Kaitai.io
+* File-format-aware / templated hex-editors
+* "zip -FF" command
 
 ### Filesystems
-Strategies for finding a needle in a haystack of data
+* Strategies for finding a needle in a haystack of data
 
 ### PCAP analysis
-Wireshark (and tshark) and using filters
-dpkt Python package for pcap manipulation
+* Wireshark (and tshark) and using filters
+* dpkt Python package for pcap manipulation
 
 ### Memory dump analysis
-Volatility
+* Volatility
 
 ## Common File formats
 
