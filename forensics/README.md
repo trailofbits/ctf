@@ -128,7 +128,7 @@ $ echo hello world\! | xxd -p
 We've discussed the fundamental concepts and the tools for the more generic forensics tasks. Now, we'll discuss more specific categories of forensics challenges, and the recommended tools for analyzing challenges in each category.
 
 It would be impossible to prepare for every possible data format, but there are some that are especially popular in CTFs. If you were prepared with tools for analyzing the following, you would be prepared for the majority of Forensics challenges:
-* Archive files (especially zip, tar)
+* Archive files (ZIP, TGZ)
 * Image file formats (JPG, GIF, BMP, PNG)
 * Filesystem images (especially EXT4)
 * Packet captures (PCAP, PCAPNG)
@@ -147,7 +147,7 @@ You also ought to check out the wonderful [file-formats illustrated visually](ht
 
 ### Archive files
 
-Most CTF challenges are contained in a zip, 7z, rar, tar or tgz file, but only in a forensics challenge will the archive container file be a part of the challenge itself. Usually the goal here is to extract a file from a damaged archive, or find data embedded somewhere in an unused field (a common forensics challenge).
+Most CTF challenges are contained in a zip, 7z, rar, tar or tgz file, but only in a forensics challenge will the archive container file be a part of the challenge itself. Usually the goal here is to extract a file from a damaged archive, or find data embedded somewhere in an unused field (a common forensics challenge). Zip is the most common in the real world, and the most common in CTFs.
 
 There are a handful of command-line tools for zip files that will be useful to know about.
 * `unzip` will often output helpful information on why a zip will not decompress.
@@ -164,12 +164,49 @@ Another note about zip cracking is that if you have an unencrypted/uncompressed 
 
 ### Image file format analysis
 
-* EXIF data (see exiftool)
-* Compression
-* Steganography (see steghide; https://github.com/zed-0xff/zsteg; http://www.caesum.com/handbook/Stegsolve.jar but generally the steg method is proprietary and so is the extraction https://en.wikipedia.org/wiki/Steganography_tools#Tools_comparison)
-* PNG (can be opened in Wireshark; pngcheck, pnginfo)
+CTFs are supposed to be fun, and image files are good for containing hacker memes, so of course image files often appear in CTF challenges. Image file formats are complex and can be abused in many ways that make for interesting analysis puzzles involving metadata fields, lossy and lossless compression, checksums, steganography, or visual data encoding schemes.
+
+The easy initial analysis step is to check an image file's metadata fields with [exiftool](http://www.sno.phy.queensu.ca/~phil/exiftool/). If an image file has been abused for a CTF, its EXIF might identify the original image dimensions, camera type, embedded thumbnail image, comments and copyright strings, GPS location coordinates, etc. There might be a gold mine of metadata, or there might be almost nothing. It's worth a look.
+
+Example of exiftool output, truncated:
+```
+$ exiftool screenshot.png 
+ExifTool Version Number         : 10.53
+File Name                       : screenshot.png
+Directory                       : .
+File Size                       : 750 kB
+File Modification Date/Time     : 2017:06:13 22:34:05-04:00
+File Access Date/Time           : 2017:06:17 13:19:58-04:00
+File Inode Change Date/Time     : 2017:06:13 22:34:05-04:00
+File Permissions                : rw-r--r--
+File Type                       : PNG
+File Type Extension             : png
+MIME Type                       : image/png
+Image Width                     : 1482
+Image Height                    : 648
+Bit Depth                       : 8
+Color Type                      : RGB with Alpha
+Compression                     : Deflate/Inflate
+...
+Primary Platform                : Apple Computer Inc.
+CMM Flags                       : Not Embedded, Independent
+Device Manufacturer             : APPL
+Device Model                    : 
+...
+Exif Image Width                : 1482
+Exif Image Height               : 648
+Image Size                      : 1482x648
+Megapixels                      : 0.960
+```
+
+PNG files, in particular, are popular in CTF challenges, probably for their lossless compression suitable for hiding non-visual data in the image. PNG files can be dissected in Wireshark. To verify correcteness or attempt to repair corrupted PNGs you can use [pngcheck](http://libpng.org/pub/png/apps/pngcheck.html). If you need to dig into PNG a little deeper, the [pngtools](http://www.stillhq.com/pngtools/) package might be useful.
+
+[Steganography](https://en.wikipedia.org/wiki/Steganography), the practice of concealing some amount of secret data within an unrelated data as its vessel (a.k.a. the "cover text"), is extraordinarily rare in the real world (made effectively obsolete by strong cryptography), but is another popular trope in CTF forensics challenges. Steganography could be implemented using any kind of data as the "cover text," but media file formats are ideal because they tolerate a certain amount of unnoticeable data loss (the same characteristic that makes lossy compression schemes possible). The difficulty with steganography is that extracting the hidden message requires not only a detection that steganography has been used, but also the exact [steganographic tool](https://en.wikipedia.org/wiki/Steganography_tools#Tools_comparison) used to embed it. Given a challenge file, if we suspect steganography, we must do at least a little guessing to check if it's present.
+
+(see steghide; https://github.com/zed-0xff/zsteg; http://www.caesum.com/handbook/Stegsolve.jar)
+
 * Gimp, screwing around with the Hue/Saturation/Luminance values, color channels
-* ImageMagick tools
+* ImageMagick tools http://www.imagemagick.org/script/index.php
 * Python Image Library
 * For QR codes, the qrtools module for Python
 
