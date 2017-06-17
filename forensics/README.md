@@ -25,9 +25,9 @@ Assuming you have already picked up some Python programming, you still may not k
 
 TODO: crash-course in manipulating binary data in Python
 
-## Common Challenge Types, Strategies
+## Common Forensics Concepts and Tools
 
-What follows is a high-level overview of some common tasks in forensics CTF challenges, and some recommended tools for tackling these problems.
+What follows is a high-level overview of some of the common concepts in forensics CTF challenges, and some recommended tools for performing common tasks.
 
 ### File format identification (and "magic bytes")
 
@@ -51,6 +51,11 @@ Files-within-files is a common trope in forensics CTF challenges, and also in em
 [scalpel](https://github.com/sleuthkit/scalpel), now a part of SleuthKit (discussed further under [Filesystems](###Filesystems)) is another tool for file-carving, formerly known as Foremost.
 
 To manually extract a sub-section of a file (from a known offset to a known offset), you can use the `dd` command. Many hex-editors also offer the ability to copy bytes and paste them as a new file, so you don't need to study the offsets.
+
+Example of file-carving with `dd` from an file-offset of 1335205 for a length of 40668937 bytes:
+```
+$ dd if=./file_with_a_file_in_it.xxx of=./extracted_file.xxx bs=1 skip=1335205 count=40668937
+```
 
 Although the above tools should suffice, in some cases you may need to programmatically extract a sub-section of a file using Python, using things like Python's re or regex modules to identify magic bytes, and the zlib module to extract zlib streams.
 
@@ -101,7 +106,7 @@ $ hexdump -n 50 -e '"0x%08x "' screenshot.png
 
 Binary is 1's and 0's, but often is transmitted as text. It would be wasteful to transmit actual sequences of 101010101, so the data is first encoded using one of a variety of methods. This is what is referred to as [binary-to-text encoding]( https://en.wikipedia.org/wiki/Binary-to-text_encoding), a popular trope in CTF challenges. When doing a `strings` analysis of a file as discussed above, you may uncover this binary data encoded as text strings.
 
-We mentioned that to excel at forensics CTF challenges, it is important to be able to recognize encodings. Some can be identifed at a glance, such as [Base64](https://en.wikipedia.org/wiki/Base64) encoded content, identifiable by its alphanumeric charset and its "=" padding suffix (when present). There are many [https://www.base64decode.org](Base64 encoder/decoders) online, or you can use the `base64` command:
+We mentioned that to excel at forensics CTF challenges, it is important to be able to recognize encodings. Some can be identifed at a glance, such as [Base64](https://en.wikipedia.org/wiki/Base64) encoded content, identifiable by its alphanumeric charset and its "=" padding suffix (when present). There are many [Base64 encoder/decoders](https://www.base64decode.org) online, or you can use the `base64` command:
 
 ```
 $ echo aGVsbG8gd29ybGQh | base64 -D
@@ -118,47 +123,90 @@ $ echo hello world\! | xxd -p
 68656c6c6f20776f726c64210a
 ```
 
-### Image formats
+## Common File formats
+
+We've discussed the fundamental concepts and the tools for the more generic forensics tasks. Now, we'll discuss more specific categories of forensics challenges, and the recommended tools for analyzing challenges in each category.
+
+It would be impossible to prepare for every possible data format, but there are some that are especially popular in CTFs. If you were prepared with tools for analyzing the following, you would be prepared for the majority of Forensics challenges:
+* Archive files (especially zip, tar)
+* Image file formats (JPG, GIF, BMP, PNG)
+* Filesystem images (especially EXT4)
+* Packet captures (PCAP, PCAPNG)
+* Memory dumps
+* PDF
+* Video (especially MP4) or Audio (especially WAV, MP3)
+* Microsoft's Office formats (RTF, OLE, OOXML)
+
+Some of the harder CTF challenges pride themselves on requiring players to analyze an especially obscure format for which no publicly available tools exist. You will need to learn to quickly locate documentation and tools for unfamiliar formats. Many file formats are well-described in the public documentation you can find with a web search, but having some familiarity with the file format specifications will also help, so we include links to those here.
+
+TODO: include links to file format specficiations
+
+When analyzing file formats, a file-format-aware (a.k.a. templated) hex-editor like [010 Editor](http://www.sweetscape.com/010editor/) is invaluable. An open-source alternative has emerged called [Kaitai](http://kaitai.io). Additionally, a lesser-known feature of [the Wireshark network protocol analyzer](https://wiki.wireshark.org/FrontPage) is [its ability to analyze certain media file formats like GIF, JPG, and PNG](https://wiki.wireshark.org/MediaTypesFamily). All of these tools, however, are made to analyze non-corrupted and well-formatted files. Many CTF challenges task you with reconstructing a file based on missing or zeroed-out format fields, etc.
+
+You also ought to check out the wonderful [file-formats illustrated visually](https://github.com/corkami/pics/tree/master/binary) by Ange Albertini.
+
+### Archive files
+
+Most CTF challenges are contained in a zip, 7z, rar, tar or tgz file, but only in a forensics challenge will the archive container file be a part of the challenge itself. Usually the goal here is to extract a file from a damaged archive, or find data embedded somewhere in an unused field (a common forensics challenge).
+
+There are a handful of command-line tools for zip files that will be useful to know about.
+* `unzip` will often output helpful information on why a zip will not decompress.
+* `zipdetails -v` will provide in-depth information on the values present in the various fields of the format.
+* `zipinfo` lists information about the zip file's contents, without extracting it.
+* `zip -F input.zip --out output.zip` and `zip -FF input.zip --out output.zip` attempt to repair a corrupted zip file.
+* [fcrackzip](https://github.com/hyc/fcrackzip) brute-force guesses a zip password (for passwords <7 characters or so).
+
+[Zip file format specification](https://pkware.cachefly.net/webdocs/casestudies/APPNOTE.TXT)
+
+One important security-related note about password-protected zip files is that they do not encrypt the filenames and original file sizes of the compressed files they contain, unlike password-protected RAR or 7z files.
+
+Another note about zip cracking is that if you have an unencrypted/uncompressed copy of any one of the files that is compressed in the encrypted zip, you can perform a "plaintext attack" and crack the zip, as [detailed here](https://www.hackthis.co.uk/articles/known-plaintext-attack-cracking-zip-files), and explained in [this paper](https://www.cs.auckland.ac.nz/~mike/zipattacks.pdf). The newer scheme for password-protecting zip files (with AES-256, rather than "ZipCrypto") does not have this weakness.
+
+### Image file format analysis
+
 * EXIF data (see exiftool)
 * Compression
-* Steganography (see steghide; https://github.com/zed-0xff/zsteg; http://www.caesum.com/handbook/Stegsolve.jar)
-* PNG (can be opened in Wireshark; pngcheck)
-* Gimp
+* Steganography (see steghide; https://github.com/zed-0xff/zsteg; http://www.caesum.com/handbook/Stegsolve.jar but generally the steg method is proprietary and so is the extraction https://en.wikipedia.org/wiki/Steganography_tools#Tools_comparison)
+* PNG (can be opened in Wireshark; pngcheck, pnginfo)
+* Gimp, screwing around with the Hue/Saturation/Luminance values, color channels
+* ImageMagick tools
 * Python Image Library
+* For QR codes, the qrtools module for Python
 
-### Other file formats
-* PDF (qpdf package, PeepDF)
-* Kaitai.io
-* File-format-aware / templated hex-editors like 010 Editor
-* "zip -FF" command
-
-### Filesystems
+### Filesystems analysis
 * Strategies for finding a needle in a haystack of data
-* mounting a filesystem
+* the `tree` command for a quick look at directory structure
+
+Example of mounting a CD-ROM filesystem image:
+```
+mkdir /mnt/challenge
+mount -t iso9660 challengefile /mnt/challenge
+```
+
 * The Sleuth Kit
 * hidden volumes
+* Windows' "alternate data streams" http://www.nirsoft.net/utils/alternate_data_streams.html
 * undeleting files (see extundelete)
 * embedded device filesystems (squashfs; see firmware-mod-kit or binwalk)
 * http://www.cgsecurity.org/wiki/TestDisk
 
-### PCAP analysis
+### Packet Capture (PCAP) file analysis
 * Wireshark (and tshark) and using filters, capinfos command
+* "packet carving", Wireshark's Extract Objects Feature (e.g., File -> Export Objects -> HTTP -> Save all)
 * dpkt Python package for pcap manipulation
 * http://f00l.de/hacking/pcapfix.php
 
 ### Memory dump analysis
-* Volatility
+* Volatility (specifying the relevant "profile")
 
-## Common File formats
+### PDF file analysis
+* qpdf package, PeepDF
 
-It would be impossible to prepare for every possible data format, but there are some that are especially popular in CTFs. If you were prepared with tools for analyzing the following, you would be prepared for the majority of Forensics challenges:
-* Archive files (especially zip, tar)
-* Filesystem images (especially EXT4)
-* PCAP and PCAPNG
-* PNG
-* PDF
-* Video (especially MP4)
-* Audio (especially WAV, MP3; see Audacity)
-* Microsoft's Office formats (RTF, OLE, OOXML; see oletools)
+### Video and Audio file analysis
+* Audacity and viewing waveforms in the spectogram view
+* Refer back to steg section of [Image file format analysis](### Image file format analysis)
+* DTMF tone decoding http://dialabc.com/sound/detect/index.html
+* Morse code
 
-Some of the harder CTF challenges pride themselves on requiring players to analyze an especially obscure format for which no publicly available tools exist. You will need to learn to quickly locate documentation and tools for unfamiliar formats.
+### Office file analysis
+* oletools
