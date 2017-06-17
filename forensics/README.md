@@ -98,11 +98,25 @@ $ hexdump -n 50 -e '"0x%08x "' screenshot.png
 [Other uses of the hexdump command.](http://www.commandlinefu.com/commands/using/hexdump)
 
 ### Binary-as-text encodings
-* https://en.wikipedia.org/wiki/Binary-to-text_encoding
-* http://www.yellowpipe.com/yis/tools/encrypter/index.php
-* ASCII-encoded hexadecimal, identifiable by its charset (0-9, A-F)
-* Base64, identifiable by its charset and the "=" suffix
-* the xxd command
+
+Binary is 1's and 0's, but often is transmitted as text. It would be wasteful to transmit actual sequences of 101010101, so the data is first encoded using one of a variety of methods. This is what is referred to as [binary-to-text encoding]( https://en.wikipedia.org/wiki/Binary-to-text_encoding), a popular trope in CTF challenges. When doing a `strings` analysis of a file as discussed above, you may uncover this binary data encoded as text strings.
+
+We mentioned that to excel at forensics CTF challenges, it is important to be able to recognize encodings. Some can be identifed at a glance, such as [Base64](https://en.wikipedia.org/wiki/Base64) encoded content, identifiable by its alphanumeric charset and its "=" padding suffix (when present). There are many [https://www.base64decode.org](Base64 encoder/decoders) online, or you can use the `base64` command:
+
+```
+$ echo aGVsbG8gd29ybGQh | base64 -D
+hello world!
+```
+
+ASCII-encoded hexadecimal is also identifiable by its charset (0-9, A-F). ASCII characters themselves occupy a certain range of bytes (0x00 through 0x7f, see `man ascii`), so if you are examining a file and find a string like `68 65 6c 6c 6f 20 77 6f 72 6c 64 21`, it's important to notice the preponderance of 0x60's here: this is ASCII. Technically, it's text ("hello world!") encoded as ASCII (binary) encoded as hexadecimal (text again). Confused yet? 😉
+
+There are [several sites](http://www.yellowpipe.com/yis/tools/encrypter/index.php) that provide online encoder-decoders for a variety of encodings. For a more local converter, try the `xxd` command.
+
+Example of using `xxd` to do text-as-ascii-to-hex encoding:
+```
+$ echo hello world\! | xxd -p
+68656c6c6f20776f726c64210a
+```
 
 ### Image formats
 * EXIF data (see exiftool)
