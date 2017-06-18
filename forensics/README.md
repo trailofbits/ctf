@@ -228,10 +228,15 @@ mount -t iso9660 challengefile /mnt/challenge
 * http://www.cgsecurity.org/wiki/TestDisk
 
 ### Packet Capture (PCAP) file analysis
-* Wireshark (and tshark) and using filters, capinfos command
-* "packet carving", Wireshark's Extract Objects Feature (e.g., File -> Export Objects -> HTTP -> Save all)
-* dpkt Python package for pcap manipulation
-* http://f00l.de/hacking/pcapfix.php
+
+Network traffic is stored and captured in a PCAP file (Packet capture), with a program like `tcpdump` or [Wireshark](https://www.wireshark.org) (both based on `libpcap`). A popular CTF challenge is to provide a PCAP file representing some network traffic and challenge the player to recover/reconstitute a transferred file or transmitted secret. Complicating matters, the packets of interest are usually in an ocean of unrelated traffic, so analysis triage and filtering the data is also a job for the player.
+
+For initial analysis, take a high-level view of the packets with Wireshark's statistics or conversations view, or its [capinfos](https://www.wireshark.org/docs/man-pages/capinfos.html) command. Wireshark, and its command-line version `tshark`, both support the concept of using "filters," which, if you master the syntax, can quickly reduce the scope of your analysis.
+
+Just as "file carving" refers to the identification and extraction of files embedded within files, "packet carving" is a term sometimes used to describe the extraction of files from a packet capture. There are expensive commercial tools for recovering files from captured packets, but one open-source alternative is the [Xplico framework](http://www.xplico.org). Wireshark also has an "Export Objects" feature to extract data from the capture (e.g., File -> Export Objects -> HTTP -> Save all).
+
+* [dpkt Python package for pcap manipulation](https://dpkt.readthedocs.io/en/latest/)
+* [online service for repairing PCAP files](http://f00l.de/hacking/pcapfix.php)
 
 ### Memory dump analysis
 * Volatility (specifying the relevant "profile")
