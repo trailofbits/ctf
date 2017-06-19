@@ -141,8 +141,6 @@ It would be impossible to prepare for every possible data format, but there are 
 
 Some of the harder CTF challenges pride themselves on requiring players to analyze an especially obscure format for which no publicly available tools exist. You will need to learn to quickly locate documentation and tools for unfamiliar formats. Many file formats are well-described in the public documentation you can find with a web search, but having some familiarity with the file format specifications will also help, so we include links to those here.
 
-TODO: include links to file format specficiations
-
 When analyzing file formats, a file-format-aware (a.k.a. templated) hex-editor like [010 Editor](http://www.sweetscape.com/010editor/) is invaluable. An open-source alternative has emerged called [Kaitai](http://kaitai.io). Additionally, a lesser-known feature of [the Wireshark network protocol analyzer](https://wiki.wireshark.org/FrontPage) is [its ability to analyze certain media file formats like GIF, JPG, and PNG](https://wiki.wireshark.org/MediaTypesFamily). All of these tools, however, are made to analyze non-corrupted and well-formatted files. Many CTF challenges task you with reconstructing a file based on missing or zeroed-out format fields, etc.
 
 You also ought to check out the wonderful [file-formats illustrated visually](https://github.com/corkami/pics/tree/master/binary) by Ange Albertini.
@@ -214,8 +212,8 @@ If you are writing a custom image file format parser, import the [Python Image L
 If working with QR codes (2D barcodes), also check out the qrtools module for Python. You can decode an image of a QR code with less than 5 lines of Python. Of course, if you just need to decode one QR code, any smartphone will do.
 
 ### Filesystems analysis
-* Strategies for finding a needle in a haystack of data
-* the `tree` command for a quick look at directory structure
+
+Occasionally, a CTF forensics challenge consists of a full disk image, and the player needs to have a strategy for finding a needle (the flag) in this haystack of data. Triage, in computer forensics, refers to the ability to quickly narrow down what to look at. Without a strategy, the only option is looking at everything, which is time-prohibitive (not to mention exhausting).
 
 Example of mounting a CD-ROM filesystem image:
 ```
@@ -223,12 +221,13 @@ mkdir /mnt/challenge
 mount -t iso9660 challengefile /mnt/challenge
 ```
 
-* The Sleuth Kit
-* hidden volumes
-* Windows' "alternate data streams" http://www.nirsoft.net/utils/alternate_data_streams.html
-* undeleting files (see extundelete)
-* embedded device filesystems (squashfs; see firmware-mod-kit or binwalk)
-* http://www.cgsecurity.org/wiki/TestDisk
+Once you have mounted the filesystem, the `tree` command is not bad for a quick look at the directory structure to see if anything sticks out to you for further analysis.
+
+You may not be looking for a file in the visible filesystem at all, but rather a hidden volume, unallocated space (disk space that is not a part of any partition), a deleted file, or a non-file filesystem structure like an [http://www.nirsoft.net/utils/alternate_data_streams.html](NTFS "alternate data stream"). For EXT3 and EXT4 filesystems, you can attempt to find deleted files with [extundelete](http://extundelete.sourceforge.net). For everything else, there's [TestDisk](http://www.cgsecurity.org/wiki/TestDisk): recover missing partition tables, fix corrupted ones, undelete files on FAT or NTFS, etc.
+
+[The Sleuth Kit](http://www.sleuthkit.org/sleuthkit/) and its accompanying web-based user interface, "Autopsy," is a powerful open-source toolkit for filesystem analysis. It's a bit geared toward law-enforcement tasks, but can be helpful for tasks like searching for a keyword across the entire disk image, or looking at the unallocated space.
+
+Embedded device filesystems are a unique category of their own. Made for fixed-function low-resource environments, they can be compressed, single-file, or read-only. [Squashfs](https://en.wikipedia.org/wiki/SquashFS) is one popular implementation of an embedded device filesystem. For images of embedded devices, you're better off analyzing them with [firmware-mod-kit](https://code.google.com/archive/p/firmware-mod-kit/) or [binwalk](https://github.com/devttys0/binwalk).
 
 ### Packet Capture (PCAP) file analysis
 
