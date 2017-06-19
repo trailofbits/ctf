@@ -242,7 +242,12 @@ If trying to repair a damaged PCAP file, there is an [online service for repairi
 A note about PCAP vs PCAPNG: there are two versions of the PCAP file format; PCAPNG is newer and not supported by all tools. You may need to convert a file from PCAPNG to PCAP using Wireshark or another compatible tool, in order to work with it in some other tools.
 
 ### Memory dump analysis
-* Volatility (specifying the relevant "profile")
+
+For years, computer forensics was synonymous with filesystem forensics, but as attackers became more sophisticated, they started to avoid the disk. Also, a snapshot of memory often contains context and clues that are impossible to find on disk because they only exist at runtime (operational configurations, remote-exploit shellcode, passwords and encryption keys, etc). So memory snapshot / memory dump forensics has become a popular practice in incident response. In a CTF, you might find a challenge that provides a memory dump image, and tasks you with locating and extracting a secret or a file from within it.
+
+The premiere open-source framework for memory dump analysis is [Volatility](http://www.volatilityfoundation.org). Volatility is a Python script for parsing memory dumps that were gathered with an external tool (or a VMware memory image gathered by pausing the VM). So, given the memory dump file and the relevant "profile" (the OS from which the dump was gathered), Volatility can start identifying the structures in the data: running processes, passwords, etc. It is also extensible using plugins for extracting various types of artifact.
+
+[Ethscan](http://jamaaldev.blogspot.com/2013/07/ethscan-volatility-memory-forensics.html?m=1) is made to find data in a memory dump that looks like network packets, and then extract it into a pcap file for viewing in Wireshark. There are plugins for extracting [SQL databases](http://blog.superponible.com/2014/08/31/volatility-plugin-sqlite-helper/), [Chrome history](http://blog.superponible.com/2014/08/31/volatility-plugin-chrome-history/), [Firefox history](http://blog.superponible.com/2014/08/31/volatility-plugin-firefox-history/) and much more.
 
 ### PDF file analysis
 
