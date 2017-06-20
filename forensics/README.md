@@ -25,7 +25,52 @@ And of course, like most CTF play, the ideal environment is a Linux system with 
 
 Assuming you have already picked up some Python programming, you still may not know how to effectively work with binary data. Low-level languages like C might be more naturally suited for this task, but Python's many useful packages from the open-source community outweigh its learning curve for working with binary data.
 
-TODO: crash-course in manipulating binary data in Python
+Here are some examples of working with binary data in Python.
+
+Writing or reading a file in binary mode:
+```python
+f = open('Reverseit', "rb")
+s = f.read()
+f.close()
+f = open('ItsReversed', "wb")
+f.write(s[::-1])
+f.close()
+```
+
+The [bytearray](http://infohost.nmt.edu/tcc/help/pubs/python/web/bytearray-type.html) type is a mutable sequence of bytes, and is available in both Python 2 and 3:
+```python
+>>> s = bytearray(b"Hello World")
+>>> for c in s: print(c)
+...
+72
+101
+108
+108
+111
+32
+87
+111
+114
+108
+100
+>>> 
+```
+
+You can also define a bytearray from hexidecimal representation Unicode strings:
+```python
+example2 = bytearray.fromhex(u'00 ff')
+>>> example2
+bytearray(b'\x00\xff')
+>>> example2[1]
+255
+```
+
+The bytearray type has most of the same convenient methods as a Python `str` or `list`: split(), insert(), reverse(), extend(), pop(), remove(), etc.
+
+Reading a file into a bytearray for processing:
+```python
+data = bytearray(open('challenge.png', 'rb').read())
+```
 
 ## Common Forensics Concepts and Tools
 
