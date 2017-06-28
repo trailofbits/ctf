@@ -11,6 +11,7 @@ So, reader, when you’ve completed a few CTFs, and you’re ready for more, rea
 * [Brandon Edwards](https://twitter.com/drraid) delivered the source auditing lectures and the newspaper app
 * [Marcin W](https://twitter.com/marcinw) and [Gotham Digital Science](http://www.gdssecurity.com/) delivered the web security lectures
 * [Dino Dai Zovi](http://www.theta44.org/main.html) delivered the introductory exploitation lectures
+* [Mike Meyers](https://twitter.com/fristle) for contributing the chapter on forensics
 
 If you're interested in taking a course like this one for credit, check out [NYU Poly](http://engineering.nyu.edu/academics/departments/computer/). They offer concentrations in cybersecurity and we collaborate with them frequently through their [Hacker in Residence](http://www.isis.poly.edu/hackers-in-residence) program.
 
