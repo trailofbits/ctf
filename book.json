@@ -3,5 +3,8 @@
 	"pluginsConfig": {
 		"ga": { "token": "UA-37017099-3" },
 		"fontSettings": { "theme": "night" }
-	}
+	},
+	"title": "CTF Field Guide",
+	"author": "Trail of Bits",
+	"language": "en"
 }
