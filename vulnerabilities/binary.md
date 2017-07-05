@@ -15,7 +15,7 @@ The following programs are both “binary bombs.” Reverse engineer the followi
 
 You should aim to solve at least eight stages between the two labs. The CMU bomb lab has a secret phase and the RPI bomb lab has a phase that involves memory corruption, can you find and solve them?
 
-* [CMU Binary Bomb Lab](http://csapp.cs.cmu.edu/public/bomb.tar)
+* [CMU Binary Bomb Lab](http://csapp.cs.cmu.edu/2e/bomb32.tar)
 * [RPI Binary Bomb Lab](http://www.cs.rpi.edu/academics/courses/spring10/csci4971/rev2/bomb)
 
 ## Tools
