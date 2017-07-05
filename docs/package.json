@@ -1,0 +1,21 @@
+{
+    "name": "CTF Field Guide",
+    "version": "0.0.1",
+    "description": "Getting and Using Other People's Computers",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/trailofbits/ctf.git"
+    },
+    "author": "Dan Guido <dan@trailofbits.com>",
+    "license": "CC BY-SA 4.0",
+    "dependencies": {},
+    "devDependencies": {
+        "grunt": "~0.4.1",
+        "grunt-gitbook": "0.4.2",
+        "grunt-gh-pages": "0.9.1",
+        "grunt-contrib-clean": "~0.5.0"
+    },
+    "peerDependencies": {
+        "grunt": "~0.4.1"
+    }
+}
