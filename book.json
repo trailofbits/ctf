@@ -2,7 +2,11 @@
 	"plugins": ["ga", "-mixpanel", "-mathjax", "fontsettings"],
 	"pluginsConfig": {
 		"ga": { "token": "UA-37017099-3" },
-		"fontSettings": { "theme": "night" }
+		"fontSettings": {
+			"theme": "night",
+			"family": "sans",
+			"size": 2
+		}
 	},
 	"title": "CTF Field Guide",
 	"author": "Trail of Bits",
