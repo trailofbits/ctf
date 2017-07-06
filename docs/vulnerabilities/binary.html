@@ -17,15 +17,15 @@
     
             
                 
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
                 
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
                 
             
         
@@ -412,7 +412,7 @@
 <p>The following programs are both &#x201C;binary bombs.&#x201D; Reverse engineer the following linux programs to identify the series of inputs that will &#x201C;defuse&#x201D; the bomb. Each successive level of the bomb focuses on a different aspect of native code. For example, in the lab from CMU you will encounter different data structures (linked lists, trees) as well as how control flow structures (switches, loops) manifest in native code. While reversing these programs you may find it useful to keep track of your progress by transforming what you see into C or another high level language.</p>
 <p>You should aim to solve at least eight stages between the two labs. The CMU bomb lab has a secret phase and the RPI bomb lab has a phase that involves memory corruption, can you find and solve them?</p>
 <ul>
-<li><a href="http://csapp.cs.cmu.edu/public/bomb.tar" target="_blank">CMU Binary Bomb Lab</a></li>
+<li><a href="http://csapp.cs.cmu.edu/2e/bomb32.tar" target="_blank">CMU Binary Bomb Lab</a></li>
 <li><a href="http://www.cs.rpi.edu/academics/courses/spring10/csci4971/rev2/bomb" target="_blank">RPI Binary Bomb Lab</a></li>
 </ul>
 <h2 id="tools">Tools</h2>
@@ -483,7 +483,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Auditing Binaries","level":"1.3.2","depth":2,"next":{"title":"Auditing Webapps","level":"1.3.3","depth":2,"path":"web/vulnerabilities.md","ref":"web/vulnerabilities.md","articles":[]},"previous":{"title":"Auditing Source","level":"1.3.1","depth":2,"path":"vulnerabilities/source.md","ref":"vulnerabilities/source.md","articles":[]},"dir":"ltr"},"config":{"plugins":["ga","-mixpanel","-mathjax"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ga":{"configuration":"auto","token":"UA-37017099-3"},"fontSettings":{"theme":"night"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Trail of Bits","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"CTF Field Guide","language":"en","gitbook":"*"},"file":{"path":"vulnerabilities/binary.md","mtime":"2017-07-05T22:13:37.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-05T22:27:50.093Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Auditing Binaries","level":"1.3.2","depth":2,"next":{"title":"Auditing Webapps","level":"1.3.3","depth":2,"path":"web/vulnerabilities.md","ref":"web/vulnerabilities.md","articles":[]},"previous":{"title":"Auditing Source","level":"1.3.1","depth":2,"path":"vulnerabilities/source.md","ref":"vulnerabilities/source.md","articles":[]},"dir":"ltr"},"config":{"plugins":["ga","-mixpanel","-mathjax","fontsettings"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ga":{"configuration":"auto","token":"UA-37017099-3"},"fontSettings":{"theme":"night"},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Trail of Bits","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"CTF Field Guide","language":"en","gitbook":"*"},"file":{"path":"vulnerabilities/binary.md","mtime":"2017-07-05T22:38:31.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-06T01:00:00.693Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -494,6 +494,10 @@
     
         
         <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
         
     
         
@@ -514,10 +518,6 @@
     
         
         <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
         
     
 
