@@ -5,7 +5,6 @@ If you ever wanted to start running, you were probably encouraged to sign up to 
 
 * [PicoCTF](https://picoctf.com/) and [PlaidCTF](http://www.plaidctf.com/) by CMU
 * [HSCTF](http://hsctf.com/) is made for high school students
-* [Ghost in the Shellcode (GitS)](http://ghostintheshellcode.com/)
 * [CSAW CTF](https://ctf.isis.poly.edu/) by NYU-Poly
 * [UCSB iCTF](http://ictf.cs.ucsb.edu/) is for academics only
 * [Defcon CTF](https://legitbs.net/)
