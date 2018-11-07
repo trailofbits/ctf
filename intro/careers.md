@@ -45,7 +45,7 @@ I primarily split up infosec jobs into internal network security, product securi
 The roles above each require a different, highly specialized body of knowledge. This website is a great resource for application security and penetration testing, but you should find other resources if you are interested in a different role.
 
 ## Learn from a Book
-Fortunately, there are dozens of good books written about each topic inside information security. [Dino Dai Zovi](http://www.amazon.com/A-Bug-Hunters-Reading-List/lm/R21POHD6Y2DOLQ) and [Tom Ptacek](http://www.amazon.com/lm/R2EN4JTQOCHNBA/ref=cm_lm_pthnk_view) both have excellent reading lists. We recommend looking at:
+Fortunately, there are dozens of good books written about each topic inside information security. [Dino Dai Zovi](https://www.amazon.com/ideas/amzn1.account.AHMETKWTW3WIMNFDCKU6HJOTXOAQ/17DNK7MXJFZPF) and [Tom Ptacek](https://www.amazon.com/ideas/amzn1.account.AFLMETB3SIZ4WEOS2SKTP65RLQDQ/25GGLAA74Q7D4) both have excellent reading lists. We recommend looking at:
 
 * [Gray Hat Hacking](http://www.amazon.com/Hacking-Ethical-Hackers-Handbook-Edition/dp/0071832386/)
 * [The Myths of Security](http://www.amazon.com/Myths-Security-Computer-Industry-Doesnt/dp/0596523025?)
