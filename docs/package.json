@@ -12,7 +12,7 @@
     "devDependencies": {
         "grunt": "~0.4.1",
         "grunt-gitbook": "0.4.2",
-        "grunt-gh-pages": "0.9.1",
+        "grunt-gh-pages": "~0.10.0",
         "grunt-contrib-clean": "~0.5.0"
     },
     "peerDependencies": {

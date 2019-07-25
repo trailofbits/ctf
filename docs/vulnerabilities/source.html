@@ -7,7 +7,7 @@
         <title>Auditing Source · CTF Field Guide</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="generator" content="GitBook 3.2.3">
         <meta name="author" content="Trail of Bits">
         
         
@@ -410,8 +410,8 @@
 <p>In order to practice your skills, we recommend going through the process of identifying as many vulnerabilities as you can in an intentionally vulnerable toy application and then moving on to a real application and doing the same.</p>
 <p>The Newspaper application is a small server written in C that allows authenticated users to read and write articles to a remote file system. Newspaper is written in such a way that it is vulnerable to many different attacks. You should be capable of identifying at least 10 bugs or potential vulnerabilities in this code.</p>
 <ul>
-<li><a href="./source_workshop/news_server.c">Newspaper App</a></li>
-<li><a href="./source_workshop/news_install.sh">Newspaper App Installer</a></li>
+<li><a href="source_workshop/news_server.c">Newspaper App</a></li>
+<li><a href="source_workshop/news_install.sh">Newspaper App Installer</a></li>
 </ul>
 <p>Wireshark, however, is an industry standard network protocol analyzer that has been under continuous development since 1998. Vulnerabilities in this code base are much fewer and far between than in the Newspaper app however many still exist. Take a look at the <a href="http://wireshark.org/security" target="_blank">wireshark security page</a>, find the name of a protocol dissector and see if you can independently discover the vulnerability without looking at the details. Dissectors are located in /epan/dissectors/ folder.</p>
 <ul>
@@ -422,14 +422,15 @@
 <ul>
 <li><a href="http://sourcenav.sourceforge.net/" target="_blank">Source Navigator</a></li>
 <li><a href="http://www.scitools.com/" target="_blank">Scitools Understand</a></li>
+<li><a href="https://www.sourcetrail.com/" target="_blank">Sourcetrail</a></li>
 <li><a href="http://meldmerge.org/" target="_blank">Meld</a></li>
 <li><a href="http://clang-analyzer.llvm.org/" target="_blank">Clang Static Analyzer</a></li>
 </ul>
 <h2 id="resources">Resources</h2>
 <p>Make sure you&#x2019;re intimately familiar with the internals of the languages you target for analysis.  Vulnerabilities are found by auditors who are more familiar with the language and the codebase than the programmers that originally developed it. In some cases, this level of understanding can be achieved simply by paying attaching to optional compiler warnings or through the use of third-party analysis tools that help track down common programming errors. Computer security is tantamount to computer mastery. Without a rigorous understanding of your targets you can never hope to defeat them.</p>
 <ul>
-<li><a href="../ctf/vulnerabilities/references/EssentialC.pdf">Essential C</a> - Programming in C primer</li>
-<li><a href="../ctf/vulnerabilities/references/Dowd_ch06.pdf">TAOSSA Chapter 6: C Language Issues</a> - Strongly recommended reading</li>
+<li><a href="references/EssentialC.pdf">Essential C</a> - Programming in C primer</li>
+<li><a href="references/Dowd_ch06.pdf">TAOSSA Chapter 6: C Language Issues</a> - Strongly recommended reading</li>
 <li><a href="http://en.wikipedia.org/wiki/Integer_overflow" target="_blank">Integer Overflow</a></li>
 <li><a href="https://wireshark.org/security/" target="_blank">Wireshark Security</a> - Examples of lots of vulnerablities</li>
 <li><a href="https://github.com/deadbits/InsecureProgramming" target="_blank">Gera&apos;s Insecure Programming by Example</a> - Examples of small vulnerable C programs</li>
@@ -477,7 +478,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Auditing Source","level":"1.3.1","depth":2,"next":{"title":"Auditing Binaries","level":"1.3.2","depth":2,"path":"vulnerabilities/binary.md","ref":"vulnerabilities/binary.md","articles":[]},"previous":{"title":"Vulnerability Discovery","level":"1.3","depth":1,"path":"vulnerabilities/README.md","ref":"vulnerabilities/README.md","articles":[{"title":"Auditing Source","level":"1.3.1","depth":2,"path":"vulnerabilities/source.md","ref":"vulnerabilities/source.md","articles":[]},{"title":"Auditing Binaries","level":"1.3.2","depth":2,"path":"vulnerabilities/binary.md","ref":"vulnerabilities/binary.md","articles":[]},{"title":"Auditing Webapps","level":"1.3.3","depth":2,"path":"web/vulnerabilities.md","ref":"web/vulnerabilities.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["ga","-mixpanel","-mathjax","fontsettings"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ga":{"configuration":"auto","token":"UA-37017099-3"},"fontSettings":{"theme":"night","family":"sans","size":2},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Trail of Bits","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"CTF Field Guide","language":"en","gitbook":"*"},"file":{"path":"vulnerabilities/source.md","mtime":"2017-07-05T22:35:47.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-06T01:15:11.149Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Auditing Source","level":"1.3.1","depth":2,"next":{"title":"Auditing Binaries","level":"1.3.2","depth":2,"path":"vulnerabilities/binary.md","ref":"vulnerabilities/binary.md","articles":[]},"previous":{"title":"Vulnerability Discovery","level":"1.3","depth":1,"path":"vulnerabilities/README.md","ref":"vulnerabilities/README.md","articles":[{"title":"Auditing Source","level":"1.3.1","depth":2,"path":"vulnerabilities/source.md","ref":"vulnerabilities/source.md","articles":[]},{"title":"Auditing Binaries","level":"1.3.2","depth":2,"path":"vulnerabilities/binary.md","ref":"vulnerabilities/binary.md","articles":[]},{"title":"Auditing Webapps","level":"1.3.3","depth":2,"path":"web/vulnerabilities.md","ref":"web/vulnerabilities.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["ga","-mixpanel","-mathjax","fontsettings"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ga":{"configuration":"auto","token":"UA-37017099-3"},"fontSettings":{"theme":"night","family":"sans","size":2},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Trail of Bits","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"CTF Field Guide","language":"en","gitbook":"*"},"file":{"path":"vulnerabilities/source.md","mtime":"2019-07-25T13:31:13.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-25T14:18:14.552Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
