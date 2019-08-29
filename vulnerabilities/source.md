@@ -14,7 +14,7 @@ In order to practice your skills, we recommend going through the process of iden
 
 The Newspaper application is a small server written in C that allows authenticated users to read and write articles to a remote file system. Newspaper is written in such a way that it is vulnerable to many different attacks. You should be capable of identifying at least 10 bugs or potential vulnerabilities in this code.
 
-* [Newspaper App](/vulnerabilities/source_workshop/news_server.c)
+* [Newspaper App](/vulnerabilities/source_workshop/news_server.c)  [*[solution]*](https://drive.google.com/file/d/18iLIC_F2q8dqIbKyZQDVx2aU5Ceag1A2/view?usp=sharing)
 * [Newspaper App Installer](/vulnerabilities/source_workshop/news_install.sh)
 
 Wireshark, however, is an industry standard network protocol analyzer that has been under continuous development since 1998. Vulnerabilities in this code base are much fewer and far between than in the Newspaper app however many still exist. Take a look at the [wireshark security page](http://wireshark.org/security), find the name of a protocol dissector and see if you can independently discover the vulnerability without looking at the details. Dissectors are located in /epan/dissectors/ folder.
