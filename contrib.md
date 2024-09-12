@@ -4,7 +4,7 @@ This book was built on a lot of hard work, most of which happened elsewhere. Wit
 So, reader, when you’ve completed a few CTFs, and you’re ready for more, reach out to this list. They like to support ambition, and they just might know someone who needs some talent.
 
 * [Andrew Ruef](https://web.archive.org/web/20150219123305/http://www.mimisbrunnr.net:80/~munin/blog/) created the initial proposal and slides
-* [Evan Jensen](https://github.com/wontonSlim) developed and refined nearly all of the lessons
+* Evan Jensen developed and refined nearly all of the lessons
 * [Nick Anderson](https://github.com/PoppySeedPlehzr) ran through the lessons and made numerous improvements
 * [Alex Sotirov](http://www.phreedom.org/) delivered the ROP lecture and provided feedback
 * [Jay Little](https://x.com/computerality) reviewed the binary exploitation modules

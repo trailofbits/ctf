@@ -8,7 +8,7 @@ A good toolkit is well rounded and easy to use. You should incorporate software 
 
 * [Creating a SOC](https://www.youtube.com/watch?v=ZlOMmycpusw)
 * [Stealth Rootkit Development](https://www.youtube.com/watch?v=gKUleWyfut0)
-* [Toolsmithing Case Study](https://www.youtube.com/watch?v=ssULDwD43TM)
+* [Toolsmithing Case Study](https://www.youtube.com/watch?v=6QNXofBK5Ms)
 * [Organizing and Participating in CTF](https://www.nps.edu/video/portal/Video.aspx?enc=Fvcj9jTKwtwcxg2Wgv3NOEGEdfe6jktD)
 * [RTFn ](https://www.youtube.com/watch?v=Xe6y-mOOVX0)
 

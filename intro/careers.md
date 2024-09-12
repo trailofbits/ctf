@@ -71,7 +71,7 @@ If you're looking for something more hands-on and directed, there are lots of un
 | [UNIX Security Holes](https://cr.yp.to/2004-494.html)                                            | D. J. Bernstein    | UIC         |
 | [Malware Analysis and Antivirus Technologies](https://web.archive.org/web/20180514164540/http://www.tml.tkk.fi/Opinnot/T-110.6220/2008/)   | various            | TML         |
 | [System Security and Binary Code Analysis](https://web.archive.org/web/20161029160519/http://www.utdallas.edu:80/~zxl111930/spring2012.html) | Zhiqiang Lin	      | UT Dallas   |
-| [Cybersecurity Specialization](https://www.coursera.org/specializations/cybersecurity)          | various            | UMD         |
+| [Cybersecurity Specialization](https://web.archive.org/web/20231220205952/https://www.coursera.org/specializations/cyber-security)          | various            | UMD         |
 | [Graduate Computer Security](https://www.cs.utexas.edu/~hovav/class/cs380s-s21/)          | Hovav Shacham      | UT Austin        |
 | [Computer Systems Security](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-858-computer-systems-security-fall-2014/)          | Nickolai Zeldovich      | MIT        |
 

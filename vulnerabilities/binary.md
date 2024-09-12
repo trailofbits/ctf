@@ -6,9 +6,9 @@ This module is about becoming familiar with the native layer and developing stra
 ## Lecture
 Learning x86 can appear daunting at first and requires some dedicated study to master. We recommend reading Chapter 3 of "Computer Systems: A Programmer's Perspective" to learn how C programs get compiled into machine code. Once you you have some basic, working knowledge of this process then keep a handy reference guide around like the x86 Assembly Guide from the University of Virginia. We've found this video series from Quinn Liu to be a quick and painless introduction too.
 
-* CS:APP Chapter 3: [Machine-Level Representation of Programs](https://gec.di.uminho.pt/DISCIP/MaisAC/CS-APP_Bryant/csapp.preview3.pdf)
+* CS:APP Chapter 3: [Machine-Level Representation of Programs](https://web.archive.org/web/20230320010534/https://gec.di.uminho.pt/DISCIP/MaisAC/CS-APP_Bryant/csapp.preview3.pdf)
 * [x86 Assembly Guide](https://www.cs.virginia.edu/~evans/cs216/guides/x86.html)
-* [Introduction to x86 Assembly](https://www.youtube.com/watch?v=qn1_dRjM6F0&list=PLPXsMt57rLthf58PFYE9gOAsuyvs7T5W9)
+<!-- TODO fix link * [Introduction to x86 Assembly](https://www.youtube.com/watch?v=qn1_dRjM6F0&list=PLPXsMt57rLthf58PFYE9gOAsuyvs7T5W9) -->
 
 ## Workshop
 The following programs are both “binary bombs.” Reverse engineer the following linux programs to identify the series of inputs that will “defuse” the bomb. Each successive level of the bomb focuses on a different aspect of native code. For example, in the lab from CMU you will encounter different data structures (linked lists, trees) as well as how control flow structures (switches, loops) manifest in native code. While reversing these programs you may find it useful to keep track of your progress by transforming what you see into C or another high level language.
