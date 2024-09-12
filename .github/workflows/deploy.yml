@@ -1,0 +1,58 @@
+---
+name: Deploy GitHub Pages
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    env:
+      CARGO_TERM_COLOR: always
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          submodules: true
+          persist-credentials: false
+
+      - name: Install mdbook
+        run: |
+          set -euxo pipefail
+          mkdir mdbook-bin
+          curl -sSL https://github.com/rust-lang/mdBook/releases/download/v0.4.40/mdbook-v0.4.40-x86_64-unknown-linux-gnu.tar.gz | tar -xz --directory=mdbook-bin
+          echo "dd131662665dd91880c8c23d867d36f6a8554286216c3a849b53a27d1a676917  mdbook-bin/mdbook" | sha256sum -c
+          echo "$PWD/mdbook-bin" >> "$GITHUB_PATH"
+
+      - name: Build artifacts
+        run: |
+          export MDBOOK_OUTPUT__HTML__GIT_REPOSITORY_URL="https://github.com/$REPO"
+          export MDBOOK_OUTPUT__HTML__EDIT_URL_TEMPLATE="https://github.com/$REPO/edit/master/{path}"
+          mdbook build
+        env:
+          REPO: "${{ github.repository }}"
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./docs
+
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

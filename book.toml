@@ -1,0 +1,16 @@
+[book]
+title = "CTF Field Guide"
+description = "Getting and Using Other People's Computers"
+authors = ["Trail of Bits"]
+language = "en"
+multilingual = false
+src = "."
+
+[build]
+build-dir = "docs"
+
+[output.html]
+google-analytics = "UA-37017099-3"
+git-repository-url = "https://github.com/trailofbits/ctf"
+edit-url-template = "https://github.com/trailofbits/ctf/edit/master/{path}"
+site-url = "/ctf/"
