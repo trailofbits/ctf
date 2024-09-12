@@ -37,7 +37,7 @@ f.write(s[::-1])
 f.close()
 ```
 
-The [bytearray](http://infohost.nmt.edu/tcc/help/pubs/python/web/bytearray-type.html) type is a mutable sequence of bytes, and is available in both Python 2 and 3:
+The [bytearray](https://web.archive.org/web/20190507205506/http://infohost.nmt.edu:80/tcc/help/pubs/python/web/bytearray-type.html) type is a mutable sequence of bytes, and is available in both Python 2 and 3:
 ```python
 >>> s = bytearray(b"Hello World")
 >>> for c in s: print(c)
@@ -93,7 +93,7 @@ Keep in mind that heuristics, and tools that employ them, can be easily fooled. 
 
 ### File carving
 
-Files-within-files is a common trope in forensics CTF challenges, and also in embedded systems' firmware where primitive or flat filesystems are common. The term for identifying a file embedded in another file and extracting it is "file carving." One of the best tools for this task is the firmware analysis tool [binwalk](https://github.com/devttys0/binwalk). 
+Files-within-files is a common trope in forensics CTF challenges, and also in embedded systems' firmware where primitive or flat filesystems are common. The term for identifying a file embedded in another file and extracting it is "file carving." One of the best tools for this task is the firmware analysis tool [binwalk](https://github.com/ReFirmLabs/binwalk). 
 
 [scalpel](https://github.com/sleuthkit/scalpel), now a part of SleuthKit (discussed further under [Filesystems](###Filesystems)) is another tool for file-carving, formerly known as Foremost.
 
@@ -205,7 +205,7 @@ There are a handful of command-line tools for zip files that will be useful to k
 
 One important security-related note about password-protected zip files is that they do not encrypt the filenames and original file sizes of the compressed files they contain, unlike password-protected RAR or 7z files.
 
-Another note about zip cracking is that if you have an unencrypted/uncompressed copy of any one of the files that is compressed in the encrypted zip, you can perform a "plaintext attack" and crack the zip, as [detailed here](https://www.hackthis.co.uk/articles/known-plaintext-attack-cracking-zip-files), and explained in [this paper](https://www.cs.auckland.ac.nz/~mike/zipattacks.pdf). The newer scheme for password-protecting zip files (with AES-256, rather than "ZipCrypto") does not have this weakness.
+Another note about zip cracking is that if you have an unencrypted/uncompressed copy of any one of the files that is compressed in the encrypted zip, you can perform a "plaintext attack" and crack the zip, as [detailed here](https://www.hackthis.co.uk/articles/known-plaintext-attack-cracking-zip-files), and explained in [this paper](https://web.archive.org/web/20171028074139/https://www.cs.auckland.ac.nz/~mike/zipattacks.pdf). The newer scheme for password-protecting zip files (with AES-256, rather than "ZipCrypto") does not have this weakness.
 
 ### Image file format analysis
 
@@ -244,7 +244,7 @@ Image Size                      : 1482x648
 Megapixels                      : 0.960
 ```
 
-PNG files, in particular, are popular in CTF challenges, probably for their lossless compression suitable for hiding non-visual data in the image. PNG files can be dissected in Wireshark. To verify correcteness or attempt to repair corrupted PNGs you can use [pngcheck](http://libpng.org/pub/png/apps/pngcheck.html). If you need to dig into PNG a little deeper, the [pngtools](http://www.stillhq.com/pngtools/) package might be useful.
+PNG files, in particular, are popular in CTF challenges, probably for their lossless compression suitable for hiding non-visual data in the image. PNG files can be dissected in Wireshark. To verify correcteness or attempt to repair corrupted PNGs you can use [pngcheck](http://libpng.org/pub/png/apps/pngcheck.html). If you need to dig into PNG a little deeper, the [pngtools](https://www.madebymikal.com/category/pngtools/) package might be useful.
 
 [Steganography](https://en.wikipedia.org/wiki/Steganography), the practice of concealing some amount of secret data within an unrelated data as its vessel (a.k.a. the "cover text"), is extraordinarily rare in the real world (made effectively obsolete by strong cryptography), but is another popular trope in CTF forensics challenges. Steganography could be implemented using any kind of data as the "cover text," but media file formats are ideal because they tolerate a certain amount of unnoticeable data loss (the same characteristic that makes lossy compression schemes possible). The difficulty with steganography is that extracting the hidden message requires not only a detection that steganography has been used, but also the exact [steganographic tool](https://en.wikipedia.org/wiki/Steganography_tools#Tools_comparison) used to embed it. Given a challenge file, if we suspect steganography, we must do at least a little guessing to check if it's present. [Stegsolve (JAR download link)](http://www.caesum.com/handbook/Stegsolve.jar) is often used to apply various steganography techniques to image files in an attempt to detect and extract hidden data. You may also try [zsteg](https://github.com/zed-0xff/zsteg).
 
@@ -252,7 +252,7 @@ PNG files, in particular, are popular in CTF challenges, probably for their loss
 
 The [ImageMagick toolset](http://www.imagemagick.org/script/index.php) can be incorporated into scripts and enable you to quickly `identify`, resize, crop, modify, `convert`, and otherwise manipulate image files.  It can also find the visual and data difference between two seemingly identical images with its `compare` tool.
 
-If you are writing a custom image file format parser, import the [Python Image Library (PIL) aka Pillow](http://pythonware.com/products/pil/). It enables you to extract frames from animated GIFs or even individual pixels from a JPG – it has native support for most major image file formats.
+If you are writing a custom image file format parser, import the [Python Image Library (PIL) aka Pillow](https://pillow.readthedocs.io/en/stable/). It enables you to extract frames from animated GIFs or even individual pixels from a JPG – it has native support for most major image file formats.
 
 If working with QR codes (2D barcodes), also check out the qrtools module for Python. You can decode an image of a QR code with less than 5 lines of Python. Of course, if you just need to decode one QR code, any smartphone will do.
 
@@ -268,7 +268,7 @@ mount -t iso9660 challengefile /mnt/challenge
 
 Once you have mounted the filesystem, the `tree` command is not bad for a quick look at the directory structure to see if anything sticks out to you for further analysis.
 
-You may not be looking for a file in the visible filesystem at all, but rather a hidden volume, unallocated space (disk space that is not a part of any partition), a deleted file, or a non-file filesystem structure like an [https://www.nirsoft.net/utils/alternate_data_streams.html](NTFS "alternate data stream"). For EXT3 and EXT4 filesystems, you can attempt to find deleted files with [extundelete](https://extundelete.sourceforge.net/). For everything else, there's [TestDisk](https://www.cgsecurity.org/wiki/TestDisk): recover missing partition tables, fix corrupted ones, undelete files on FAT or NTFS, etc.
+You may not be looking for a file in the visible filesystem at all, but rather a hidden volume, unallocated space (disk space that is not a part of any partition), a deleted file, or a non-file filesystem structure like an [NTFS "alternate data stream"](https://www.nirsoft.net/utils/alternate_data_streams.html). For EXT3 and EXT4 filesystems, you can attempt to find deleted files with [extundelete](https://extundelete.sourceforge.net/). For everything else, there's [TestDisk](https://www.cgsecurity.org/wiki/TestDisk): recover missing partition tables, fix corrupted ones, undelete files on FAT or NTFS, etc.
 
 [The Sleuth Kit](https://www.sleuthkit.org/sleuthkit/) and its accompanying web-based user interface, "Autopsy," is a powerful open-source toolkit for filesystem analysis. It's a bit geared toward law-enforcement tasks, but can be helpful for tasks like searching for a keyword across the entire disk image, or looking at the unallocated space.
 
@@ -278,7 +278,7 @@ Embedded device filesystems are a unique category of their own. Made for fixed-f
 
 Network traffic is stored and captured in a PCAP file (Packet capture), with a program like `tcpdump` or [Wireshark](https://www.wireshark.org) (both based on `libpcap`). A popular CTF challenge is to provide a PCAP file representing some network traffic and challenge the player to recover/reconstitute a transferred file or transmitted secret. Complicating matters, the packets of interest are usually in an ocean of unrelated traffic, so analysis triage and filtering the data is also a job for the player.
 
-For initial analysis, take a high-level view of the packets with Wireshark's statistics or conversations view, or its [capinfos](https://www.wireshark.org/docs/man-pages/capinfos.html) command. Wireshark, and its command-line version `tshark`, both support the concept of using "filters," which, if you master the syntax, can quickly reduce the scope of your analysis. There is also an online service called [PacketTotal](https://www.packettotal.com/) where you can submit PCAP files up to 50MB, and graphically display some timelines of connections, and SSL metadata on the secure connections. Plus it will highlight file transfers and show you any "suspicious" activity. If you already know what you're searching for, you can do `grep`-style searching through packets using [`ngrep`](https://en.wikipedia.org/wiki/Ngrep).
+For initial analysis, take a high-level view of the packets with Wireshark's statistics or conversations view, or its [capinfos](https://www.wireshark.org/docs/man-pages/capinfos.html) command. Wireshark, and its command-line version `tshark`, both support the concept of using "filters," which, if you master the syntax, can quickly reduce the scope of your analysis. There is also an online service called [DynamiteLab (formerly PacketTotal)](https://lab.dynamite.ai/) where you can submit PCAP files up to 50MB, and graphically display some timelines of connections, and SSL metadata on the secure connections. Plus it will highlight file transfers and show you any "suspicious" activity. If you already know what you're searching for, you can do `grep`-style searching through packets using [`ngrep`](https://en.wikipedia.org/wiki/Ngrep).
 
 Just as "file carving" refers to the identification and extraction of files embedded within files, "packet carving" is a term sometimes used to describe the extraction of files from a packet capture. There are expensive commercial tools for recovering files from captured packets, but one open-source alternative is the [Xplico framework](https://www.xplico.org/). Wireshark also has an "Export Objects" feature to extract data from the capture (e.g., File -> Export Objects -> HTTP -> Save all). Beyond that, you can try tcpxtract, [Network Miner](https://www.netresec.com/?page=NetworkMiner), [Foremost](https://foremost.sourceforge.net), or [Snort](https://www.snort.org).
 
