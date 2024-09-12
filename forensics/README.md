@@ -89,7 +89,7 @@ screenshot.png: PNG image data, 1920 x 1080, 8-bit/color RGBA, non-interlaced
 
 Keep in mind that heuristics, and tools that employ them, can be easily fooled. Because it is a CTF, you may be presented with a file that has been intentionally crafted to mislead `file`. Also, if a file contains another file embedded somewhere inside it, the `file` command is only going to identify the containing filetype. In scenarios such as these you may need to examine the file content more closely.
 
-[TrID](http://mark0.net/soft-trid-e.html) is a more sophisticated version of `file`. Although it's closed-source, it's free and works across platforms. It also uses an identification heuristic, but with certainty percentages. Its advantage is its larger set of known filetypes that include a lot of proprietary and obscure formats seen in the real world.
+[TrID](https://mark0.net/soft-trid-e.html) is a more sophisticated version of `file`. Although it's closed-source, it's free and works across platforms. It also uses an identification heuristic, but with certainty percentages. Its advantage is its larger set of known filetypes that include a lot of proprietary and obscure formats seen in the real world.
 
 ### File carving
 
@@ -147,7 +147,7 @@ $ hexdump -n 50 -e '"0x%08x "' screenshot.png
 0x474e5089 0x0a1a0a0d 0x0d000000 0x52444849 0xca050000 0x88020000 0x00000608 0xc93d4000 0x180000a4 0x43436924 0x43434950 0x6f725020 0x00006966
 ```
 
-[Other uses of the hexdump command.](http://www.commandlinefu.com/commands/using/hexdump)
+[Other uses of the hexdump command.](https://www.commandlinefu.com/commands/using/hexdump)
 
 ### Binary-as-text encodings
 
@@ -186,7 +186,7 @@ It would be impossible to prepare for every possible data format, but there are 
 
 Some of the harder CTF challenges pride themselves on requiring players to analyze an especially obscure format for which no publicly available tools exist. You will need to learn to quickly locate documentation and tools for unfamiliar formats. Many file formats are well-described in the public documentation you can find with a web search, but having some familiarity with the file format specifications will also help, so we include links to those here.
 
-When analyzing file formats, a file-format-aware (a.k.a. templated) hex-editor like [010 Editor](http://www.sweetscape.com/010editor/) is invaluable. An open-source alternative has emerged called [Kaitai](http://kaitai.io). Additionally, a lesser-known feature of [the Wireshark network protocol analyzer](https://wiki.wireshark.org/FrontPage) is [its ability to analyze certain media file formats like GIF, JPG, and PNG](https://wiki.wireshark.org/MediaTypesFamily). All of these tools, however, are made to analyze non-corrupted and well-formatted files. Many CTF challenges task you with reconstructing a file based on missing or zeroed-out format fields, etc.
+When analyzing file formats, a file-format-aware (a.k.a. templated) hex-editor like [010 Editor](https://www.sweetscape.com/010editor/) is invaluable. An open-source alternative has emerged called [Kaitai](https://kaitai.io). Additionally, a lesser-known feature of [the Wireshark network protocol analyzer](https://wiki.wireshark.org/FrontPage) is [its ability to analyze certain media file formats like GIF, JPG, and PNG](https://wiki.wireshark.org/MediaTypesFamily). All of these tools, however, are made to analyze non-corrupted and well-formatted files. Many CTF challenges task you with reconstructing a file based on missing or zeroed-out format fields, etc.
 
 You also ought to check out the wonderful [file-formats illustrated visually](https://github.com/corkami/pics/tree/master/binary) by Ange Albertini.
 
@@ -244,13 +244,13 @@ Image Size                      : 1482x648
 Megapixels                      : 0.960
 ```
 
-PNG files, in particular, are popular in CTF challenges, probably for their lossless compression suitable for hiding non-visual data in the image. PNG files can be dissected in Wireshark. To verify correcteness or attempt to repair corrupted PNGs you can use [pngcheck](http://libpng.org/pub/png/apps/pngcheck.html). If you need to dig into PNG a little deeper, the [pngtools](https://www.madebymikal.com/category/pngtools/) package might be useful.
+PNG files, in particular, are popular in CTF challenges, probably for their lossless compression suitable for hiding non-visual data in the image. PNG files can be dissected in Wireshark. To verify correcteness or attempt to repair corrupted PNGs you can use [pngcheck](https://libpng.org/pub/png/apps/pngcheck.html). If you need to dig into PNG a little deeper, the [pngtools](https://www.madebymikal.com/category/pngtools/) package might be useful.
 
-[Steganography](https://en.wikipedia.org/wiki/Steganography), the practice of concealing some amount of secret data within an unrelated data as its vessel (a.k.a. the "cover text"), is extraordinarily rare in the real world (made effectively obsolete by strong cryptography), but is another popular trope in CTF forensics challenges. Steganography could be implemented using any kind of data as the "cover text," but media file formats are ideal because they tolerate a certain amount of unnoticeable data loss (the same characteristic that makes lossy compression schemes possible). The difficulty with steganography is that extracting the hidden message requires not only a detection that steganography has been used, but also the exact [steganographic tool](https://en.wikipedia.org/wiki/Steganography_tools#Tools_comparison) used to embed it. Given a challenge file, if we suspect steganography, we must do at least a little guessing to check if it's present. [Stegsolve (JAR download link)](http://www.caesum.com/handbook/Stegsolve.jar) is often used to apply various steganography techniques to image files in an attempt to detect and extract hidden data. You may also try [zsteg](https://github.com/zed-0xff/zsteg).
+[Steganography](https://en.wikipedia.org/wiki/Steganography), the practice of concealing some amount of secret data within an unrelated data as its vessel (a.k.a. the "cover text"), is extraordinarily rare in the real world (made effectively obsolete by strong cryptography), but is another popular trope in CTF forensics challenges. Steganography could be implemented using any kind of data as the "cover text," but media file formats are ideal because they tolerate a certain amount of unnoticeable data loss (the same characteristic that makes lossy compression schemes possible). The difficulty with steganography is that extracting the hidden message requires not only a detection that steganography has been used, but also the exact [steganographic tool](https://en.wikipedia.org/wiki/Steganography_tools#Tools_comparison) used to embed it. Given a challenge file, if we suspect steganography, we must do at least a little guessing to check if it's present. [Stegsolve (JAR download link)](https://www.caesum.com/handbook/Stegsolve.jar) is often used to apply various steganography techniques to image files in an attempt to detect and extract hidden data. You may also try [zsteg](https://github.com/zed-0xff/zsteg).
 
 [Gimp](https://www.gimp.org) provides the ability to alter various aspects of the visual data of an image file. CTF challenge authors have historically used altered Hue/Saturation/Luminance values or color channels to hide a secret message. Gimp is also good for confirming whether something really *is* an image file: for instance, when you believe you have recovered image data from a display buffer in a memory dump or elsewhere, but you lack the image file header that specifies pixel format, image height and width and so on. Open your mystery data as "raw image data" in Gimp and experiment with different settings.
 
-The [ImageMagick toolset](http://www.imagemagick.org/script/index.php) can be incorporated into scripts and enable you to quickly `identify`, resize, crop, modify, `convert`, and otherwise manipulate image files.  It can also find the visual and data difference between two seemingly identical images with its `compare` tool.
+The [ImageMagick toolset](https://www.imagemagick.org/script/index.php) can be incorporated into scripts and enable you to quickly `identify`, resize, crop, modify, `convert`, and otherwise manipulate image files.  It can also find the visual and data difference between two seemingly identical images with its `compare` tool.
 
 If you are writing a custom image file format parser, import the [Python Image Library (PIL) aka Pillow](https://pillow.readthedocs.io/en/stable/). It enables you to extract frames from animated GIFs or even individual pixels from a JPG – it has native support for most major image file formats.
 

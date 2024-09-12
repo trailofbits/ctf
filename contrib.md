@@ -9,7 +9,7 @@ So, reader, when you’ve completed a few CTFs, and you’re ready for more, rea
 * [Alex Sotirov](http://www.phreedom.org/) delivered the ROP lecture and provided feedback
 * [Jay Little](https://x.com/computerality) reviewed the binary exploitation modules
 * [Brandon Edwards](https://x.com/drraid) delivered the source auditing lectures and the newspaper app
-* [Marcin W](https://x.com/marcinw) and [Gotham Digital Science](http://www.gdssecurity.com/) delivered the web security lectures
+* [Marcin W](https://x.com/marcinw) and [Gotham Digital Science](https://www.gdssecurity.com/) delivered the web security lectures
 * [Dino Dai Zovi](https://theta44.org/) delivered the introductory exploitation lectures
 * [Mike Myers](https://x.com/fristle) for contributing the chapter on forensics
 

@@ -15,10 +15,10 @@ Download and run the [OWASP Broken Web Apps](https://code.google.com/p/owaspbwa/
 
 ## Tools
 Burp Suite is a local HTTP proxy intended for security testing. Burp Suite is made for web penetration testers and simplifies many common tasks in a point-and-click GUI. The features available in the free version are more than enough to complete this and many other web security challenges.
-* [Burp Suite](http://portswigger.net/burp/download.html)
+* [Burp Suite](https://portswigger.net/burp)
 
 ## Resources
 Many simple testing methods and common web application flaws are available in the walkthrough. Ensure that you understand the fundementals of HTTP, HTML, and PHP to do well on this section.
-* [OWASP Top 10 Tools and Tactics](http://resources.infosecinstitute.com/owasp-top-10-tools-and-tactics/)
-* [The Tangled Web: Chapter 3](http://www.nostarch.com/download/tangledweb_ch3.pdf)
+* [OWASP Top 10 Tools and Tactics](https://resources.infosecinstitute.com/owasp-top-10-tools-and-tactics/)
+* [The Tangled Web: Chapter 3](https://www.nostarch.com/download/tangledweb_ch3.pdf)
 * [PHP Primer](https://web.archive.org/web/20160913013411/http://www2.astro.psu.edu/users/sdb210/documents/phpprimer_v0.1.pdf)
