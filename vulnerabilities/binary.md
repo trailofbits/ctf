@@ -4,7 +4,7 @@ You’ve made it all the way down to the native layer, this is what software is 
 This module is about becoming familiar with the native layer and developing strategies for understanding, analyzing and interpreting native code. By the end of this module you should be capable of performing a “reverse compilation” -- going from assembly fragments to statements in higher level languages -- and, in the process, deriving meaning and programmer intent.
 
 ## Lecture
-Learning x86 can appear daunting at first and requires some dedicated study to master. We recommend reading Chapter 3 of "Computer Systems: A Programmer's Perspective" to learn how C programs get compiled into machine code. Once you you have some basic, working knowledge of this process then keep a handy reference guide around like the x86 Assembly Guide from the University of Virginia. We've found this video series from Quinn Liu to be a quick and painless introduction too.
+Learning x86 can appear daunting at first and requires some dedicated study to master. We recommend reading Chapter 3 of "Computer Systems: A Programmer's Perspective" to learn how C programs get compiled into machine code. Once you have some basic, working knowledge of this process then keep a handy reference guide around like the x86 Assembly Guide from the University of Virginia. We've found this video series from Quinn Liu to be a quick and painless introduction too.
 
 * CS:APP Chapter 3: [Machine-Level Representation of Programs](https://web.archive.org/web/20230320010534/https://gec.di.uminho.pt/DISCIP/MaisAC/CS-APP_Bryant/csapp.preview3.pdf)
 * [x86 Assembly Guide](https://www.cs.virginia.edu/~evans/cs216/guides/x86.html)

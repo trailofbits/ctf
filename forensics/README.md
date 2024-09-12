@@ -99,7 +99,7 @@ Files-within-files is a common trope in forensics CTF challenges, and also in em
 
 To manually extract a sub-section of a file (from a known offset to a known offset), you can use the `dd` command. Many hex-editors also offer the ability to copy bytes and paste them as a new file, so you don't need to study the offsets.
 
-Example of file-carving with `dd` from an file-offset of 1335205 for a length of 40668937 bytes:
+Example of file-carving with `dd` from a file-offset of 1335205 for a length of 40668937 bytes:
 ```
 $ dd if=./file_with_a_file_in_it.xxx of=./extracted_file.xxx bs=1 skip=1335205 count=40668937
 ```
