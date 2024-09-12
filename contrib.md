@@ -16,17 +16,13 @@ So, reader, when you’ve completed a few CTFs, and you’re ready for more, rea
 If you're interested in taking a course like this one for credit, check out [NYU Poly](http://engineering.nyu.edu/academics/departments/computer/). They offer concentrations in cybersecurity and we collaborate with them frequently through their [Hacker in Residence](http://www.isis.poly.edu/hackers-in-residence) program.
 
 # Contributing
-If you want to make a contribution, simply commit your new markdown to the `master` branch and we'll take it from there. Gitbook has a fantastic [editor](https://github.com/GitbookIO/editor/releases) available to help preview your changes. We're always looking for new or refined content, so please send us your suggestions!
+If you want to make a contribution, simply commit your new markdown to the `master` branch and we'll take it from there. We're always looking for new or refined content, so please send us your suggestions!
 
-## Gitbook Usage
-The CTF Field Guide is built with [Gitbook](https://github.com/GitbookIO/gitbook), a command line tool for building books with Git and Markdown. You can use Gitbook to output the CTF Field Guide as a PDF, an eBook or a single, printable HTML page. Make sure you have [NodeJS](http://nodejs.org/) and `npm` on your operating system, then install Gitbook and a few of its plugins:
+## mdBook Usage
+The CTF Field Guide is built with [mdBook](https://rust-lang.github.io/mdBook/), a command line tool for building books with Git and Markdown. Refer to [mdBook's installation page](https://rust-lang.github.io/mdBook/guide/installation.html) to get it set up.
 
-```
-npm install gitbook gitbook-plugin-ga gitbook-pdf ebook-convert -g
-```
+With mdBook installed, you can run any of these commands from within the book directory:
+* Generate an interactive, static website: ```mdbook build```
+* Serve the book via HTTP, to locally browse and edit it: ```mdbook serve```.
 
-With Gitbook installed, you can run any of these commands from within the book directory:
-* Generate an interactive, static website: ```gitbook build ./myrepo```
-* Generate a single page website: ```gitbook build ./myrepo -f page```.
-* Generate a PDF: ```gitbook pdf ./myrepo```. Requires [gitbook-pdf](https://github.com/GitbookIO/gitbook-pdf).
-* Generate an eBook: ```gitbook ebook ./myrepo```. Requires [ebook-convert](http://manual.calibre-ebook.com/cli/ebook-convert.html).
+Third-party plugins also exist if you wish to export the book as EPUB or PDF.
