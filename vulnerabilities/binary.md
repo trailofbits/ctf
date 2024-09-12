@@ -29,17 +29,17 @@ Debuggers allow you to interact with and examine the state of running code by se
 ## Resources
 Many good resources exist for learning x86 assembly and the various tricks employed in capture the flag exercises. In addition to the resources above, the x86 Wikibook and the AMD instruction set manual are more complete reference guides you may want to refer to (we find the AMD manual can be less daunting than the corresponding manual from Intel).
 
-* AMD64 Programmer's Manual: [General-Purpose and System Instructions](http://amd-dev.wpengine.netdna-cdn.com/wordpress/media/2008/10/24594_APM_v3.pdf)
+* AMD64 Programmer's Manual: [General-Purpose and System Instructions](https://web.archive.org/web/20220218072952/http://amd-dev.wpengine.netdna-cdn.com/wordpress/media/2008/10/24594_APM_v3.pdf)
 * [x86 Assembly Wikibook](https://en.wikibooks.org/wiki/X86_Assembly)
 * [Computer Systems: A Programmer's Perspective](http://csapp.cs.cmu.edu/) (CS:APP)
 
 Some of the tools used for reverse engineering can be as complicated as assembly language itself. Cheatsheets that list out common commands and use cases can be helpful.
 
-* [gdb Quick Reference](http://www.refcards.com/docs/peschr/gdb/gdb-refcard-a4.pdf)
+* [gdb Quick Reference](https://web.archive.org/web/20130902060112/http://www.refcards.com/docs/peschr/gdb/gdb-refcard-a4.pdf)
 * [IDA Quick Reference](https://www.hex-rays.com/products/ida/support/freefiles/IDA_Pro_Shortcuts.pdf)
 * [WinDBG x86 Cheat Sheet](./references/X86_Win32_Reverse_Engineering_Cheat_Sheet.pdf)
 
 Finally, many capture the flag challenges will make use of anti-debugging and anti-disassembly techniques to hide or obfuscate the goal. Several of these techniques are employed by the bomb labs but you may want a more complete reference.
 
 * [Linux anti-debugging techniques](http://vxheavens.com/lib/vsc04.html)
-* [The "Ultimate" Anti-Debugging Reference](http://pferrie.host22.com/papers/antidebug.pdf)
+* [The "Ultimate" Anti-Debugging Reference](https://web.archive.org/web/20191114080821/http://pferrie.host22.com/papers/antidebug.pdf)

@@ -21,4 +21,4 @@ Burp Suite is a local HTTP proxy intended for security testing. Burp Suite is ma
 Many simple testing methods and common web application flaws are available in the walkthrough. Ensure that you understand the fundementals of HTTP, HTML, and PHP to do well on this section.
 * [OWASP Top 10 Tools and Tactics](http://resources.infosecinstitute.com/owasp-top-10-tools-and-tactics/)
 * [The Tangled Web: Chapter 3](http://www.nostarch.com/download/tangledweb_ch3.pdf)
-* [PHP Primer](http://www2.astro.psu.edu/users/sdb210/documents/phpprimer_v0.1.pdf)
+* [PHP Primer](https://web.archive.org/web/20160913013411/http://www2.astro.psu.edu/users/sdb210/documents/phpprimer_v0.1.pdf)

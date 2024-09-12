@@ -22,8 +22,8 @@ Some functionality you should not neglect:
 * Network/Host situational awareness.
 
 ## Resources
-* [Meterpreter Functionality Outline](http://www.nologin.org/Downloads/Papers/meterpreter.pdf)
-* [IDA Python Overview](http://www.offensivecomputing.net/papers/IDAPythonIntro.pdf), [IDA Python Download](https://code.google.com/p/idapython/)
+* [Meterpreter Functionality Outline](https://web.archive.org/web/20170630033743/http://www.nologin.org/Downloads/Papers/meterpreter.pdf)
+* [IDA Python Overview](https://web.archive.org/web/20150715001346/http://www.offensivecomputing.net/papers/IDAPythonIntro.pdf), [IDA Python Download](https://code.google.com/p/idapython/)
 * [NASM Documentation](http://www.nasm.us/xdoc/2.11/html/nasmdoc2.html)
 * [Pyershark](https://code.google.com/p/pyreshark/)
 * Code you might find useful from the [Pwnies](https://github.com/pwnies/pwntools) (Python) and [Ronin](https://ronin-ruby.github.io/) (Ruby)
