@@ -162,7 +162,7 @@ hello world!
 
 ASCII-encoded hexadecimal is also identifiable by its charset (0-9, A-F). ASCII characters themselves occupy a certain range of bytes (0x00 through 0x7f, see `man ascii`), so if you are examining a file and find a string like `68 65 6c 6c 6f 20 77 6f 72 6c 64 21`, it's important to notice the preponderance of 0x60's here: this is ASCII. Technically, it's text ("hello world!") encoded as ASCII (binary) encoded as hexadecimal (text again). Confused yet? 😉
 
-There are [several sites](http://www.yellowpipe.com/yis/tools/encrypter/index.php) that provide online encoder-decoders for a variety of encodings. For a more local converter, try the `xxd` command.
+There are [several sites](https://gchq.github.io/CyberChef/) that provide online encoder-decoders for a variety of encodings. For a more local converter, try the `xxd` command.
 
 Example of using `xxd` to do text-as-ascii-to-hex encoding:
 ```
@@ -211,7 +211,7 @@ Another note about zip cracking is that if you have an unencrypted/uncompressed 
 
 CTFs are supposed to be fun, and image files are good for containing hacker memes, so of course image files often appear in CTF challenges. Image file formats are complex and can be abused in many ways that make for interesting analysis puzzles involving metadata fields, lossy and lossless compression, checksums, steganography, or visual data encoding schemes.
 
-The easy initial analysis step is to check an image file's metadata fields with [exiftool](http://www.sno.phy.queensu.ca/~phil/exiftool/). If an image file has been abused for a CTF, its EXIF might identify the original image dimensions, camera type, embedded thumbnail image, comments and copyright strings, GPS location coordinates, etc. There might be a gold mine of metadata, or there might be almost nothing. It's worth a look.
+The easy initial analysis step is to check an image file's metadata fields with [exiftool](https://exiftool.org/). If an image file has been abused for a CTF, its EXIF might identify the original image dimensions, camera type, embedded thumbnail image, comments and copyright strings, GPS location coordinates, etc. There might be a gold mine of metadata, or there might be almost nothing. It's worth a look.
 
 Example of exiftool output, truncated:
 ```
@@ -374,7 +374,7 @@ $ tree
     └── webSettings.xml
 ```
 
-As you can see, some of the structure is created by the file and folder hierarchy. The rest is specified inside the XML files. [*New Steganographic Techniques for the OOXML File Format*, 2011](http://download.springer.com/static/pdf/713/chp%253A10.1007%252F978-3-642-23300-5_27.pdf?originUrl=http%3A%2F%2Flink.springer.com%2Fchapter%2F10.1007%2F978-3-642-23300-5_27&token2=exp=1497911340~acl=%2Fstatic%2Fpdf%2F713%2Fchp%25253A10.1007%25252F978-3-642-23300-5_27.pdf%3ForiginUrl%3Dhttp%253A%252F%252Flink.springer.com%252Fchapter%252F10.1007%252F978-3-642-23300-5_27*~hmac=aca7e2655354b656ca7d699e8e68ceb19a95bcf64e1ac67354d8bca04146fd3d) details some ideas for data hiding techniques, but CTF challenge authors will always be coming up with new ones.
+As you can see, some of the structure is created by the file and folder hierarchy. The rest is specified inside the XML files. [*New Steganographic Techniques for the OOXML File Format*, 2011](https://www.researchgate.net/publication/221548814_New_Steganographic_Techniques_for_the_OOXML_File_Format) details some ideas for data hiding techniques, but CTF challenge authors will always be coming up with new ones.
 
 Once again, a Python toolset exists for the examination and analysis of OLE and OOXML documents: [oletools](http://www.decalage.info/python/oletools). For OOXML documents in particular, [OfficeDissector](https://www.officedissector.com) is a very powerful analysis framework (and Python library). The latter includes a [quick guide to its usage](https://github.com/grierforensics/officedissector/blob/master/doc/html/_sources/txt/ANALYZING_OOXML.txt).
 

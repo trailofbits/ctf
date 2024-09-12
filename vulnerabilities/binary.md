@@ -23,7 +23,7 @@ The two essential tools for working with native code are the debugger and the di
 
 Debuggers allow you to interact with and examine the state of running code by setting breakpoints and examining memory and register contents. You may find this useful as a sanity check if you are not seeing the results you expect your input to produce but be alert, some programs employ anti-debugger techniques and can modify program behavior in the presence of a debugger. The GNU Debugger (gdb) is the standard debugger for most linux systems. gdb can be acquired through the package manager in your chosen linux distribution.
 
-* [IDA Pro Demo](https://www.hex-rays.com/products/ida/support/download_demo.shtml)
+* [IDA Pro Demo](https://hex-rays.com/download-center/)
 * [gdb](http://www.sourceware.org/gdb/)
 
 ## Resources
@@ -41,5 +41,5 @@ Some of the tools used for reverse engineering can be as complicated as assembly
 
 Finally, many capture the flag challenges will make use of anti-debugging and anti-disassembly techniques to hide or obfuscate the goal. Several of these techniques are employed by the bomb labs but you may want a more complete reference.
 
-* [Linux anti-debugging techniques](http://vxheavens.com/lib/vsc04.html)
+* [Linux anti-debugging techniques](https://web.archive.org/web/20141216013210/http://vxheaven.org/lib/vsc04.html)
 * [The "Ultimate" Anti-Debugging Reference](https://web.archive.org/web/20191114080821/http://pferrie.host22.com/papers/antidebug.pdf)

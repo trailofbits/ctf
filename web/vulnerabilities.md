@@ -2,11 +2,11 @@
 Welcome to the web hacking module. This module is about getting familiar with vulnerabilities commonly found in web applications. At the end of this module you will be able to identify common vulnerabilities in web based applications using a variety of testing methodologies and source level auditing. The lecture material will give you all the tools you need to successfully audit the workshop material.
 
 ## Lecture
-* [Web Hacking Part I](http://vimeo.com/32509769)
-* [Web Hacking Part II](http://vimeo.com/32550671)
+* [Web Hacking Part I](https://vimeo.com/32509769)
+* [Web Hacking Part II](https://vimeo.com/32550671)
 
 ## Workshop
-In order to practice your skills, we recommend going through the process of finding and exploiting vulnerabilities in the [Damn Vulnerable Web App (DVWA)](http://www.dvwa.co.uk/) and the Siberia Exploit Kit. DVWA is a collection of vulnerable test cases implemented in PHP and serves as an easy introduction to the many things that can go wrong in web applications. The Siberia Exploit Kit is a "crimeware pack" used by criminals to perform massive compromises. It includes a package of browser exploits and a command and control panel intended to manage compromised hosts. Siberia contains several pre- and post-authentication vulnerabilities that allow an attacker to gain administrative access to the panel, then take over the server on which it is hosted.
+In order to practice your skills, we recommend going through the process of finding and exploiting vulnerabilities in the [Damn Vulnerable Web App (DVWA)](https://github.com/digininja/DVWA) and the Siberia Exploit Kit. DVWA is a collection of vulnerable test cases implemented in PHP and serves as an easy introduction to the many things that can go wrong in web applications. The Siberia Exploit Kit is a "crimeware pack" used by criminals to perform massive compromises. It includes a package of browser exploits and a command and control panel intended to manage compromised hosts. Siberia contains several pre- and post-authentication vulnerabilities that allow an attacker to gain administrative access to the panel, then take over the server on which it is hosted.
 
 Download and run the [OWASP Broken Web Apps](https://code.google.com/p/owaspbwa/) virtual machine in VMware to start this workshop. BWA includes many web applications many for security testing, including DVWA. Once you have mastered DVWA, feel free to move on to other vulnerable web applications! Try auditing Siberia's source code to find the vulnerabilities, paying attention to sources of input in PHP.
 
