@@ -1,0 +1,11 @@
+https://vimeo.com/.*
+https://web.archive.org/.*
+https://.*.reddit.com/.*
+https://www.researchgate.net/.*
+
+# behind cloudflare
+https://www.cgisecurity.com/.*
+
+# network error from GH
+https://csapp.cs.cmu.edu/.*
+https://wiki.sei.cmu.edu/.*
