@@ -11,7 +11,7 @@ In order to practice your skills, we recommend going through the process of find
 Download and run the [OWASP Broken Web Apps](https://code.google.com/p/owaspbwa/) virtual machine in VMware to start this workshop. BWA includes many web applications many for security testing, including DVWA. Once you have mastered DVWA, feel free to move on to other vulnerable web applications! Try auditing Siberia's source code to find the vulnerabilities, paying attention to sources of input in PHP.
 
 * [OWASP Broken Web Apps](https://code.google.com/p/owaspbwa/)
-* [Siberia Crimeware Pack](/web/workshop/siberia.zip) (pw: infected)
+* [Siberia Crimeware Pack](./workshop/siberia.zip) (pw: infected)
 
 ## Tools
 Burp Suite is a local HTTP proxy intended for security testing. Burp Suite is made for web penetration testers and simplifies many common tasks in a point-and-click GUI. The features available in the free version are more than enough to complete this and many other web security challenges.

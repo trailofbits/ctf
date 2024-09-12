@@ -37,7 +37,7 @@ Some of the tools used for reverse engineering can be as complicated as assembly
 
 * [gdb Quick Reference](http://www.refcards.com/docs/peschr/gdb/gdb-refcard-a4.pdf)
 * [IDA Quick Reference](https://www.hex-rays.com/products/ida/support/freefiles/IDA_Pro_Shortcuts.pdf)
-* [WinDBG x86 Cheat Sheet](/vulnerabilities/references/X86_Win32_Reverse_Engineering_Cheat_Sheet.pdf)
+* [WinDBG x86 Cheat Sheet](./references/X86_Win32_Reverse_Engineering_Cheat_Sheet.pdf)
 
 Finally, many capture the flag challenges will make use of anti-debugging and anti-disassembly techniques to hide or obfuscate the goal. Several of these techniques are employed by the bomb labs but you may want a more complete reference.
 
