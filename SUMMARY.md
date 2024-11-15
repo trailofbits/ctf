@@ -1,5 +1,7 @@
 # Summary
 
+[Introduction](README.md)
+
 * [Capture the Flag](intro/README.md)
   * [Find a CTF](intro/find.md)
   * [Find a Job](intro/careers.md)
@@ -16,4 +18,6 @@
   * [Toolkit Prep](toolkits/prep.md)
 * [Operational Tradecraft](tradecraft/README.md)
   * [Case Studies](tradecraft/case_studies.md)
-* [Contributing](contrib.md)
+
+---
+[Contributing](contrib.md)

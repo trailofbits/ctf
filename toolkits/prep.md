@@ -6,11 +6,11 @@ A good toolkit is well rounded and easy to use. You should incorporate software 
 
 ## Lecture
 
-* [Creating a SOC](http://www.youtube.com/watch?v=ZlOMmycpusw)
-* [Stealth Rootkit Development](http://www.youtube.com/watch?v=gKUleWyfut0)
-* [Toolsmithing Case Study](http://www.youtube.com/watch?v=ssULDwD43TM)
-* [Organizing and Participating in CTF](http://www.nps.edu/video/portal/Video.aspx?enc=Fvcj9jTKwtwcxg2Wgv3NOEGEdfe6jktD)
-* [RTFn ](http://www.youtube.com/watch?v=Xe6y-mOOVX0)
+* [Creating a SOC](https://www.youtube.com/watch?v=ZlOMmycpusw)
+* [Stealth Rootkit Development](https://www.youtube.com/watch?v=gKUleWyfut0)
+* [Toolsmithing Case Study](https://www.youtube.com/watch?v=6QNXofBK5Ms)
+* [Organizing and Participating in CTF](https://www.nps.edu/video/portal/Video.aspx?enc=Fvcj9jTKwtwcxg2Wgv3NOEGEdfe6jktD)
+* [RTFn ](https://www.youtube.com/watch?v=Xe6y-mOOVX0)
 
 ##  Workshop
 Create three lists. Populate the first list with the functionality your ideal toolkit would provide. Populate the second list with software that can provide that functionality. Use the third list to rank in order of importance functionality that is inadequately supported by the software from list two. Begin developing software that fills in the gaps of your ideal toolkit.
@@ -22,8 +22,8 @@ Some functionality you should not neglect:
 * Network/Host situational awareness.
 
 ## Resources
-* [Meterpreter Functionality Outline](http://www.nologin.org/Downloads/Papers/meterpreter.pdf)
-* [IDA Python Overview](http://www.offensivecomputing.net/papers/IDAPythonIntro.pdf), [IDA Python Download](https://code.google.com/p/idapython/)
-* [NASM Documentation](http://www.nasm.us/xdoc/2.11/html/nasmdoc2.html)
+* [Meterpreter Functionality Outline](https://web.archive.org/web/20170630033743/http://www.nologin.org/Downloads/Papers/meterpreter.pdf)
+* [IDA Python Overview](https://web.archive.org/web/20150715001346/http://www.offensivecomputing.net/papers/IDAPythonIntro.pdf), [IDA Python Download](https://code.google.com/p/idapython/)
+* [NASM Documentation](https://www.nasm.us/xdoc/2.11/html/nasmdoc2.html)
 * [Pyershark](https://code.google.com/p/pyreshark/)
-* Code you might find useful from the [Pwnies](https://github.com/pwnies/pwntools) (Python) and [Ronin](https://ronin-ruby.github.io/) (Ruby)
+* Code you might find useful from the [pwntools](https://github.com/Gallopsled/pwntools) (Python) and [Ronin](https://ronin-rb.dev/) (Ruby)
